@@ -1,8 +1,21 @@
-<script>
+<script lang=ts>
     import { Menu, X, Home, Info, Mail, User, Calendar, BookOpen, FileText, Feather } from 'lucide-svelte';
     import { fade, slide } from 'svelte/transition';
     import { page } from '$app/stores';
-    let menuOpen = false;
+
+    let menuOpen = $state(false);
+
+    const navLinks = [
+      { name: 'Home', href: '/', icon: Home },
+      { name: 'About', href: '/about', icon: Info },
+      // { name: 'Contact', href: '/contact', icon: Mail },
+      // { name: 'Portal', href: '/portal', icon: User },
+      { name: 'Trips and Events', href: '/trips-events', icon: Calendar },
+      { name: 'Scouting Resources', href: '/resources', icon: BookOpen },
+      // { name: 'Scouting', href: '/scouting-101', icon: BookOpen },
+      // { name: 'Forms', href: '/misc-forms', icon: FileText },
+      // { name: 'Eagle Nest', href: '/eagle-nest', icon: Feather },
+    ];
 </script>
 
 <nav class="sticky top-0 z-50 backdrop-blur-sm bg-white/75 dark:bg-gray-900/75 text-gray-800 dark:text-gray-100 shadow-md">
@@ -19,7 +32,7 @@
     <div class="flex items-center">
         <button
             class="lg:hidden p-2 focus:outline-none text-gray-800 dark:text-gray-100"
-            on:click={() => (menuOpen = !menuOpen)}
+            onclick={() => (menuOpen = !menuOpen)}
         >
             {#if menuOpen}
               <X class="w-6 h-6" />
@@ -29,62 +42,19 @@
         </button>
         <!-- Desktop Menu -->
         <ul class="hidden lg:flex space-x-6 justify-end items-center">
-          <li>
-            <a
-              href="/"
-              class="flex items-center gap-1 py-1 px-2 rounded-md transition-colors duration-200 hover:bg-gray-100 dark:hover:bg-gray-700"
-              class:text-yellow-300={$page.url.pathname === '/'}
-            ><Home class="w-4 h-4"/> Home</a>
-          </li>
-          <li>
-            <a
-              href="/about"
-              class="flex items-center gap-1 py-1 px-2 rounded-md transition-colors duration-200 hover:bg-gray-100 dark:hover:bg-gray-700"
-              class:text-yellow-300={$page.url.pathname === '/about'}
-            ><Info class="w-4 h-4"/> About</a>
-          </li>
-          <li>
-            <a
-              href="/contact"
-              class="flex items-center gap-1 py-1 px-2 rounded-md transition-colors duration-200 hover:bg-gray-100 dark:hover:bg-gray-700"
-              class:text-yellow-300={$page.url.pathname === '/contact'}
-            ><Mail class="w-4 h-4"/> Contact</a>
-          </li>
-          <li>
-            <a
-              href="/portal"
-              class="flex items-center gap-1 py-1 px-2 rounded-md transition-colors duration-200 hover:bg-gray-100 dark:hover:bg-gray-700"
-              class:text-yellow-300={$page.url.pathname === '/portal'}
-            ><User class="w-4 h-4"/> Portal</a>
-          </li>
-          <li>
-            <a
-              href="/trips-events"
-              class="flex items-center gap-1 py-1 px-2 rounded-md transition-colors duration-200 hover:bg-gray-100 dark:hover:bg-gray-700"
-              class:text-yellow-300={$page.url.pathname === '/trips-events'}
-            ><Calendar class="w-4 h-4"/> Trips</a>
-          </li>
-          <li>
-            <a
-              href="/scouting-101"
-              class="flex items-center gap-1 py-1 px-2 rounded-md transition-colors duration-200 hover:bg-gray-100 dark:hover:bg-gray-700"
-              class:text-yellow-300={$page.url.pathname === '/scouting-101'}
-            ><BookOpen class="w-4 h-4"/> Scouting</a>
-          </li>
-          <li>
-            <a
-              href="/misc-forms"
-              class="flex items-center gap-1 py-1 px-2 rounded-md transition-colors duration-200 hover:bg-gray-100 dark:hover:bg-gray-700"
-              class:text-yellow-300={$page.url.pathname === '/misc-forms'}
-            ><FileText class="w-4 h-4"/> Forms</a>
-          </li>
-          <li>
-            <a
-              href="/eagle-nest"
-              class="flex items-center gap-1 py-1 px-2 rounded-md transition-colors duration-200 hover:bg-gray-100 dark:hover:bg-gray-700"
-              class:text-yellow-300={$page.url.pathname === '/eagle-nest'}
-            ><Feather class="w-4 h-4"/> Eagle Nest</a>
-          </li>
+          {#each navLinks as link}
+            <li>
+              <a
+                href={link.href}
+                class="flex items-center gap-1 py-1 px-2 rounded-md transition-colors duration-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+                class:dark:text-yellow-300={$page.url.pathname === link.href}
+                class:font-semibold={$page.url.pathname === link.href}
+                class:text-yellow-500={$page.url.pathname === link.href}
+              >
+                <link.icon class="w-4 h-4" /> {link.name}
+              </a>
+            </li>
+          {/each}
         </ul>
         <!-- Mobile Menu -->
         {#if menuOpen}
@@ -98,14 +68,13 @@
               in:slide={{ duration: 200 }}
               out:slide={{ duration: 200 }}
             >
-              <li><a href="/" class="flex items-center gap-2 text-lg hover:bg-gray-100 dark:hover:bg-gray-700 p-3 rounded-md"><Home class="w-6 h-6"/> Home</a></li>
-              <li><a href="/about" class="flex items-center gap-2 text-lg hover:bg-gray-100 dark:hover:bg-gray-700 p-3 rounded-md"><Info class="w-6 h-6"/> About</a></li>
-              <li><a href="/contact" class="flex items-center gap-2 text-lg hover:bg-gray-100 dark:hover:bg-gray-700 p-3 rounded-md"><Mail class="w-6 h-6"/> Contact</a></li>
-              <li><a href="/portal" class="flex items-center gap-2 text-lg hover:bg-gray-100 dark:hover:bg-gray-700 p-3 rounded-md"><User class="w-6 h-6"/> Portal</a></li>
-              <li><a href="/trips-events" class="flex items-center gap-2 text-lg hover:bg-gray-100 dark:hover:bg-gray-700 p-3 rounded-md"><Calendar class="w-6 h-6"/> Trips</a></li>
-              <li><a href="/scouting-101" class="flex items-center gap-2 text-lg hover:bg-gray-100 dark:hover:bg-gray-700 p-3 rounded-md"><BookOpen class="w-6 h-6"/> Scouting</a></li>
-              <li><a href="/misc-forms" class="flex items-center gap-2 text-lg hover:bg-gray-100 dark:hover:bg-gray-700 p-3 rounded-md"><FileText class="w-6 h-6"/> Forms</a></li>
-              <li><a href="/eagle-nest" class="flex items-center gap-2 text-lg hover:bg-gray-100 dark:hover:bg-gray-700 p-3 rounded-md"><Feather class="w-6 h-6"/> Eagle Nest</a></li>
+              {#each navLinks as link}
+                <li>
+                  <a href={link.href} class="flex items-center gap-2 text-lg hover:bg-gray-100 dark:hover:bg-gray-700 p-3 rounded-md">
+                    <link.icon class="w-6 h-6" /> {link.name}
+                  </a>
+                </li>
+              {/each}
             </ul>
           </div>
         {/if}
