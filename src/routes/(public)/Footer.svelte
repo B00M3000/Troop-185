@@ -1,5 +1,5 @@
 <script lang=ts>
-    import { Instagram, Mail, MapPin, Clock, Users, Star } from "lucide-svelte";
+    import { Instagram, Mail, MapPin, Clock, Star } from "lucide-svelte";
 </script>
 
 <footer class="bg-gradient-to-br from-blue-900 via-blue-800 to-gray-900 text-white px-12 py-10 border-t-4 border-yellow-400 shadow-2xl mt-12">
