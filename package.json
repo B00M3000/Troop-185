@@ -1,11 +1,12 @@
 {
-	"name": "Troop-185",
+	"name": "troop-185",
 	"version": "0.0.1",
 	"type": "module",
 	"scripts": {
-		"dev": "vite dev",
+		"dev": "vite dev --port 3000 --host",
 		"build": "vite build",
-		"preview": "vite preview",
+		"preview": "vite preview --host --port 3000",
+		"build-and-preview": "vite build && vite preview --host --port 3000",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
 	},
