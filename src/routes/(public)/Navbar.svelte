@@ -2,6 +2,7 @@
     import { Menu, X, Home, Info, Mail, User, Calendar, BookOpen, FileText, Feather } from 'lucide-svelte';
     import { fade, slide } from 'svelte/transition';
     import { page } from '$app/stores';
+    import { onNavigate } from '$app/navigation';
 
     let menuOpen = $state(false);
 
@@ -16,6 +17,11 @@
       // { name: 'Eagle Nest', href: '/eagle-nest', icon: Feather },
       { name: 'Portal', href: '/portal', icon: User },
     ];
+
+    onNavigate(() => {
+      // Close the menu when navigating to a new page
+      menuOpen = false;
+    });
 </script>
 
 <nav class="sticky top-0 z-50 backdrop-blur-sm bg-white/75 dark:bg-gray-900/75 text-gray-800 dark:text-gray-100 shadow-md">
