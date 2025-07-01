@@ -1,89 +1,152 @@
 <script lang="ts">
-  import { User, Calendar, Award, FileText, Users, Settings } from 'lucide-svelte';
+  import { User, Calendar, Award, FileText, Users, Settings, Upload, Database } from 'lucide-svelte';
+  
+  let { data } = $props();
+
+  let { session } = data;
+
+  // Role flags for bitwise operations
+  const ROLES = {
+    SCOUT: 1,      // 0001
+    ADULT: 2,      // 0010
+    ADMIN: 4,      // 0100
+    UNASSIGNED: 8  // 1000
+  } as const;
+
+  // Helper function to check if user has required roles
+  function hasRequiredRole(userRole: string | undefined, requiredRoles: number): boolean {
+    if (!userRole) return requiredRoles & ROLES.UNASSIGNED;
+    const roleFlag = ROLES[userRole as keyof typeof ROLES];
+    return roleFlag ? (requiredRoles & roleFlag) !== 0 : false;
+  }
+
+  // Portal cards data with role-based access control
+  let portalCards = [
+    {
+      id: 'events',
+      title: 'Events & Calendar',
+      description: 'View and manage troop events and calendar.',
+      icon: Calendar,
+      color: 'green',
+      href: '/resources/calendar',
+      isActive: true,
+      allowedRoles: ROLES.UNASSIGNED | ROLES.SCOUT | ROLES.ADULT | ROLES.ADMIN
+    },
+    {
+      id: 'documents',
+      title: 'Documents',
+      description: 'Access troop documents and forms.',
+      icon: FileText,
+      color: 'purple',
+      href: '#',
+      isActive: false,
+      allowedRoles: ROLES.UNASSIGNED | ROLES.SCOUT | ROLES.ADULT | ROLES.ADMIN 
+    },
+    {
+      id: 'patrol',
+      title: 'My Patrol',
+      description: 'Connect with your patrol members.',
+      icon: Users,
+      color: 'indigo',
+      href: '#',
+      isActive: false,
+      allowedRoles: ROLES.SCOUT // Only scouts
+    },
+    {
+      id: 'upload-event',
+      title: 'Upload Trip/Event',
+      description: 'Share photos and memories from recent trips, campouts, and troop activities.',
+      icon: Upload,
+      color: 'blue',
+      href: '/portal/upload-event',
+      isActive: true,
+      allowedRoles: ROLES.ADMIN // Only admins
+    },
+    {
+      id: 'user-data-management',
+      title: 'User and Data Management',
+      description: 'Manage user accounts and site data settings.',
+      icon: Database,
+      color: 'red',
+      href: '#',
+      isActive: false,
+      allowedRoles: ROLES.ADMIN // Only admins
+    }
+  ];
+
+  // Color variant maps for static class names
+  const colorVariants = {
+    blue: {
+      icon: 'text-blue-600',
+      hover: 'group-hover:text-blue-600'
+    },
+    green: {
+      icon: 'text-green-600',
+      hover: 'group-hover:text-green-600'
+    },
+    purple: {
+      icon: 'text-purple-600',
+      hover: 'group-hover:text-purple-600'
+    },
+    indigo: {
+      icon: 'text-indigo-600',
+      hover: 'group-hover:text-indigo-600'
+    },
+    red: {
+      icon: 'text-red-600',
+      hover: 'group-hover:text-red-600'
+    },
+    yellow: {
+      icon: 'text-yellow-600',
+      hover: 'group-hover:text-yellow-600'
+    },
+    gray: {
+      icon: 'text-gray-600',
+      hover: 'group-hover:text-gray-600'
+    }
+  };
+
+  // Filter cards based on user's role
+  let visibleCards = $derived(portalCards.filter(card => hasRequiredRole(session.user.role, card.allowedRoles)));
 </script>
 
-<div class="min-h-screen bg-gray-50 py-8 px-4">
-  <div class="max-w-6xl mx-auto">
+<main class="bg-gray-50 py-8 px-4 flex flex-col overflow-y-auto">
+  <div class="max-w-7xl mx-auto flex flex-col items-center">
     <!-- Header -->
-    <div class="text-center mb-12">
-      <h1 class="text-4xl font-bold text-blue-800 mb-4">Troop 185 Portal</h1>
-      <p class="text-lg text-gray-600">Welcome to your scouting dashboard</p>
+    <div class="text-center mb-12 mt-24">
+      <!-- Welcome Section with User Info -->
+      <div class="flex items-center justify-center mb-6 gap-4">
+        <img src={session.user.image} alt="User Avatar" class="w-32 h-32 rounded-full border-4 border-blue-200 mr-4" />
+        <div class="text-left flex flex-col gap-2">
+          <h2 class="text-4xl font-semibold text-gray-800">Welcome back, {session.user.name}!</h2>
+          <p class="text-gray-600 text-xl">Ready for your next adventure?</p>
+        </div>
+      </div>
     </div>
 
     <!-- Main Navigation Cards -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-      <!-- Profile Card -->
-      <a href="/portal/profile" class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow p-6 block group">
-        <div class="flex items-center mb-4">
-          <User class="w-8 h-8 text-blue-600 mr-3" />
-          <h3 class="text-xl font-semibold text-gray-800 group-hover:text-blue-600">My Profile</h3>
-        </div>
-        <p class="text-gray-600">View and update your personal information, contact details, and emergency contacts.</p>
-      </a>
-
-      <!-- Events Card -->
-      <a href="/portal/events" class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow p-6 block group">
-        <div class="flex items-center mb-4">
-          <Calendar class="w-8 h-8 text-green-600 mr-3" />
-          <h3 class="text-xl font-semibold text-gray-800 group-hover:text-green-600">Events & Calendar</h3>
-        </div>
-        <p class="text-gray-600">View upcoming meetings, campouts, and troop activities. RSVP for events.</p>
-      </a>
-
-      <!-- Advancement Card -->
-      <a href="/portal/advancement" class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow p-6 block group">
-        <div class="flex items-center mb-4">
-          <Award class="w-8 h-8 text-yellow-600 mr-3" />
-          <h3 class="text-xl font-semibold text-gray-800 group-hover:text-yellow-600">Advancement</h3>
-        </div>
-        <p class="text-gray-600">Track your rank progress, merit badges, and advancement requirements.</p>
-      </a>
-
-      <!-- Documents Card -->
-      <a href="/portal/documents" class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow p-6 block group">
-        <div class="flex items-center mb-4">
-          <FileText class="w-8 h-8 text-purple-600 mr-3" />
-          <h3 class="text-xl font-semibold text-gray-800 group-hover:text-purple-600">Documents</h3>
-        </div>
-        <p class="text-gray-600">Access permission slips, medical forms, and important troop documents.</p>
-      </a>
-
-      <!-- Patrol Card -->
-      <a href="/portal/patrol" class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow p-6 block group">
-        <div class="flex items-center mb-4">
-          <Users class="w-8 h-8 text-red-600 mr-3" />
-          <h3 class="text-xl font-semibold text-gray-800 group-hover:text-red-600">My Patrol</h3>
-        </div>
-        <p class="text-gray-600">Connect with your patrol members and track patrol activities.</p>
-      </a>
-
-      <!-- Settings Card -->
-      <a href="/portal/settings" class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow p-6 block group">
-        <div class="flex items-center mb-4">
-          <Settings class="w-8 h-8 text-gray-600 mr-3" />
-          <h3 class="text-xl font-semibold text-gray-800 group-hover:text-gray-600">Settings</h3>
-        </div>
-        <p class="text-gray-600">Manage your account settings, notifications, and preferences.</p>
-      </a>
-    </div>
-
-    <!-- Quick Actions -->
-    <div class="bg-white rounded-lg shadow-md p-6">
-      <h2 class="text-2xl font-bold text-gray-800 mb-4">Quick Actions</h2>
-      <div class="flex flex-wrap gap-4">
-        <a href="/portal/login" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors">
-          Sign In
-        </a>
-        <a href="/portal/events" class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition-colors">
-          View Events
-        </a>
-        <a href="/portal/advancement" class="bg-yellow-600 text-white px-4 py-2 rounded-md hover:bg-yellow-700 transition-colors">
-          Check Progress
-        </a>
-        <a href="/" class="bg-gray-600 text-white px-4 py-2 rounded-md hover:bg-gray-700 transition-colors">
-          Back to Main Site
-        </a>
-      </div>
+    <div class="flex flex-wrap gap-6 mb-8 items-center justify-center">
+      {#each visibleCards as card (card.id)}
+        {#if card.isActive}
+          <!-- Active Card -->
+          <a href={card.href} class="w-96 h-64 bg-white rounded-lg shadow-md hover:shadow-lg transition p-6 hover:scale-105 block group">
+            <div class="flex items-center mb-4">
+              <card.icon class="w-8 h-8 {colorVariants[card.color]?.icon || 'text-gray-600'} mr-3" />
+              <h3 class="text-xl font-semibold text-gray-800 {colorVariants[card.color]?.hover || 'group-hover:text-gray-600'}">{card.title}</h3>
+            </div>
+            <p class="text-gray-600">{card.description}</p>
+          </a>
+        {:else}
+          <!-- Placeholder Card -->
+          <div class="w-96 h-64 bg-gray-100 rounded-lg shadow-md p-6 opacity-60 cursor-not-allowed">
+            <div class="flex items-center mb-4">
+              <card.icon class="w-8 h-8 text-gray-400 mr-3" />
+              <h3 class="text-xl font-semibold text-gray-500">{card.title}</h3>
+            </div>
+            <p class="text-gray-400">{card.description}</p>
+          </div>
+        {/if}
+      {/each}
     </div>
   </div>
-</div>
+</main>

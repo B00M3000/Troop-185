@@ -2,21 +2,19 @@ import mongoose from "mongoose";
 
 interface UserDocumentData {
     name: string;
+    email: string;
+    image?: string; // Profile picture URL from Google
     role: "SCOUT" | "ADMIN";
     lastActive: Date;
-    email: string;
-    password_hash: string;
-    session_token?: string;
 }
 
 const schema = new mongoose.Schema<UserDocumentData>(
   {
-    name: { type: String, required: true },
+    name: { type: String, required: false },
     email: { type: String, required: true, unique: true },
-    password_hash: { type: String, required: true },
-    role: { type: String, enum: ["SCOUT", "ADMIN"], required: true },
-    lastActive: { type: Date },
-    session_token: { type: String, unique: true, sparse: true }
+    image: { type: String, required: false }, // Google profile picture URL
+    role: { type: String, enum: ["UNASSIGNED", "SCOUT", "ADMIN"], required: true },
+    lastActive: { type: Date }
   },
   { timestamps: true }
 );

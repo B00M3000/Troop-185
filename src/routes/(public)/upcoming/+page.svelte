@@ -1,6 +1,6 @@
-<script>
+<script lang="ts">
   import { onMount } from 'svelte';
-  let events = [];
+  let events: any[] = [];
 
   // Mock data fetch for events (replace with actual API if needed)
   onMount(() => {

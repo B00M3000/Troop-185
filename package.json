@@ -23,8 +23,14 @@
 		"vite": "^5.4.19"
 	},
 	"dependencies": {
+		"@auth/core": "^0.40.0",
+		"@auth/mongodb-adapter": "^3.10.0",
+		"@auth/sveltekit": "^1.10.0",
+		"dompurify": "^3.2.6",
 		"dotenv": "^16.5.0",
 		"lucide-svelte": "^0.469.0",
+		"marked": "^16.0.0",
+		"mongodb": "^6.17.0",
 		"mongoose": "^8.16.0",
 		"zod": "^3.25.67"
 	}
