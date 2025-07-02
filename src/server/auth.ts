@@ -13,7 +13,7 @@ declare module "@auth/core/types" {
   interface Session {
     user: {
       id: string
-      role: "SCOUT" | "ADMIN"
+      role: "UNASSIGNED" | "SCOUT" | "ADULT" | "ADMIN"
       image?: string
     } & DefaultSession["user"]
   }

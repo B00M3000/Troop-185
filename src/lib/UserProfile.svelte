@@ -6,7 +6,7 @@
       name?: string | null
       email?: string | null
       image?: string | null
-      role?: "SCOUT" | "ADMIN"
+      role?: "UNASSIGNED" | "SCOUT" | "ADULT" | "ADMIN"
     }
     size?: 'sm' | 'md' | 'lg'
     showRole?: boolean

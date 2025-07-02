@@ -157,7 +157,7 @@
   }
 </script>
 
-<main class="bg-gray-50 py-8 px-4 overflow-y-auto">
+<main class="bg-gray-50 py-8 px-8 overflow-y-auto">
   <div class="max-w-[64rem] mx-auto">
     <!-- Header -->
     <div class="mb-8">

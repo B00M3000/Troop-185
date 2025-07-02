@@ -32,7 +32,7 @@
   }
 </script>
 
-<div class="flex items-center justify-center min-h-screen bg-gray-50">
+<div class="flex items-center justify-center h-full pb-8 bg-gray-50">
   <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 w-full max-w-sm">
     <h1 class="text-2xl font-bold mb-6 text-center text-blue-800">
       Troop 185 Portal Login

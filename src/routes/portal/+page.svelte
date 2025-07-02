@@ -63,13 +63,13 @@
       allowedRoles: ROLES.ADMIN // Only admins
     },
     {
-      id: 'user-data-management',
-      title: 'User and Data Management',
-      description: 'Manage user accounts and site data settings.',
-      icon: Database,
-      color: 'red',
-      href: '#',
-      isActive: false,
+      id: 'user-management',
+      title: 'User Management',
+      description: 'Manage users.',
+      icon: Users,
+      color: 'gray',
+      href: '/portal/user-management',
+      isActive: true,
       allowedRoles: ROLES.ADMIN // Only admins
     }
   ];
@@ -110,14 +110,14 @@
   let visibleCards = $derived(portalCards.filter(card => hasRequiredRole(session.user.role, card.allowedRoles)));
 </script>
 
-<main class="bg-gray-50 py-8 px-4 flex flex-col overflow-y-auto">
+<main class="bg-gray-50 py-8 px-8 flex flex-col overflow-y-auto">
   <div class="max-w-7xl mx-auto flex flex-col items-center">
     <!-- Header -->
-    <div class="text-center mb-12 mt-24">
+    <div class="text-center mb-12 mt-8 md:mt-16">
       <!-- Welcome Section with User Info -->
-      <div class="flex items-center justify-center mb-6 gap-4">
+      <div class="flex max-md:flex-col items-center justify-center mb-6 gap-4">
         <img src={session.user.image} alt="User Avatar" class="w-32 h-32 rounded-full border-4 border-blue-200 mr-4" />
-        <div class="text-left flex flex-col gap-2">
+        <div class="text-center md:text-left flex flex-col gap-2">
           <h2 class="text-4xl font-semibold text-gray-800">Welcome back, {session.user.name}!</h2>
           <p class="text-gray-600 text-xl">Ready for your next adventure?</p>
         </div>
@@ -129,7 +129,7 @@
       {#each visibleCards as card (card.id)}
         {#if card.isActive}
           <!-- Active Card -->
-          <a href={card.href} class="w-96 h-64 bg-white rounded-lg shadow-md hover:shadow-lg transition p-6 hover:scale-105 block group">
+          <a href={card.href} class="w-96 h-64 bg-white rounded-lg shadow-md hover:shadow-lg transition p-6 hover:scale-105 block group" data-sveltekit-preload-data>
             <div class="flex items-center mb-4">
               <card.icon class="w-8 h-8 {colorVariants[card.color]?.icon || 'text-gray-600'} mr-3" />
               <h3 class="text-xl font-semibold text-gray-800 {colorVariants[card.color]?.hover || 'group-hover:text-gray-600'}">{card.title}</h3>
