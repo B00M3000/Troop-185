@@ -26,6 +26,7 @@ export const { handle, signIn, signOut } = SvelteKitAuth({
   adapter: MongoDBAdapter(clientPromise, {
     databaseName: "Development1"
   }),
+  trustHost: true,
   providers: [
     Google({
       clientId: GOOGLE_CLIENT_ID,
