@@ -20,9 +20,6 @@ importers:
       dompurify:
         specifier: ^3.2.6
         version: 3.2.6
-      dotenv:
-        specifier: ^16.5.0
-        version: 16.5.0
       lucide-svelte:
         specifier: ^0.469.0
         version: 0.469.0(svelte@5.34.1)
@@ -54,6 +51,9 @@ importers:
       autoprefixer:
         specifier: ^10.4.21
         version: 10.4.21(postcss@8.5.5)
+      dotenv:
+        specifier: ^16.5.0
+        version: 16.5.0
       svelte:
         specifier: ^5.34.1
         version: 5.34.1
