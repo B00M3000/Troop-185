@@ -137,23 +137,63 @@
   async function handleSubmit() {
     isUploading = true;
     
-    // TODO: Implement actual upload logic
-    console.log('Uploading event:', {
-      eventTitle,
-      eventDate,
-      location,
-      participants,
-      description: replaceImageAliases(description), // Replace aliases before submission
-      imageAliases // Also log the alias mapping for debugging
-    });
-    
-    // Simulate upload delay
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    isUploading = false;
-    
-    // TODO: Show success message and redirect
-    alert('Event uploaded successfully!');
+    try {
+      // Prepare the data for submission
+      const requestData = {
+        eventTitle,
+        eventDate,
+        location: location || undefined,
+        participants: participants || undefined,
+        description,
+        imageAliases
+      };
+
+      console.log('Uploading event:', requestData);
+
+      // Send POST request to API endpoint
+      const response = await fetch('/portal/upload-event', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestData)
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({ message: 'Unknown error' }));
+        throw new Error(errorData.message || `HTTP ${response.status}: ${response.statusText}`);
+      }
+
+      const result = await response.json();
+      
+      // Show success message
+      alert(`Event uploaded successfully! ${result.uploadedImages} images were uploaded.`);
+      
+      // Reset form
+      eventTitle = '';
+      eventDate = '';
+      location = '';
+      participants = '';
+      description = '';
+      imageAliases = {};
+      imageCounter = 0;
+      
+      // Optionally redirect to a success page or event list
+      // goto('/portal/events');
+      
+    } catch (error) {
+      console.error('Error uploading event:', error);
+      
+      // Show user-friendly error message
+      let errorMessage = 'Failed to upload event';
+      if (error instanceof Error) {
+        errorMessage = error.message;
+      }
+      
+      alert(`Error: ${errorMessage}`);
+    } finally {
+      isUploading = false;
+    }
   }
 </script>
 

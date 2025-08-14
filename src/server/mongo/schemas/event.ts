@@ -7,6 +7,8 @@ interface EventDocumentData {
     body: string; // Markdown content with image aliases
     imageAliases: Map<string, string>; // Maps alias names to base64 data URLs
     createdBy: mongoose.Types.ObjectId; // Reference to User who created the event
+    createdAt?: Date;
+    updatedAt?: Date;
 }
 
 const schema = new mongoose.Schema<EventDocumentData>(

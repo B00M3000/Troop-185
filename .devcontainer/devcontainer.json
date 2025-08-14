@@ -14,7 +14,8 @@
 		"vscode": {
 			"extensions": [
 				"svelte.svelte-vscode",
-				"bradlc.vscode-tailwindcss"
+				"bradlc.vscode-tailwindcss",
+				"amazonwebservices.aws-toolkit-vscode"
 			]
 		}
 	},

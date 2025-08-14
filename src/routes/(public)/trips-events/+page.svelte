@@ -1,26 +1,37 @@
 <script lang="ts">
-  // No special logic needed
+  import EventCard from '@/lib/EventCard.svelte';
+  import type { PageData } from './$types';
+  
+  export let data: PageData;
+  
+  $: events = data.events || [];
 </script>
 
-<div class="max-w-4xl mx-auto p-6">
+<div class="max-w-6xl mx-auto p-6">
   <h1 class="text-3xl font-bold mb-6 text-blue-800">Trips & Events</h1>
-  <p class="mb-6 text-lg">Find permission slips, packing lists, trip reports, and more for recent and upcoming Troop 185 activities and adventures.</p>
-  <div class="flex flex-wrap gap-8 justify-center">
-    <div class="bg-white shadow rounded p-4 flex flex-col items-center w-full sm:w-[320px] max-w-xs">
-      <img src="https://www.mytroop185.com/files/2019-07-31_19_29_10_question-mark-with-fake-man-jyrvtgpmjlz6.jpg" alt="Mystery Trip" class="rounded shadow mb-2 w-full object-cover" />
-      <h2 class="text-xl font-semibold mb-1">Mystery Trip (Older Scouts)</h2>
-      <a href="#" class="text-blue-600 underline mb-1">Permission Slip</a>
-      <a href="#" class="text-blue-600 underline mb-1">Packing List</a>
+  <p class="mb-8 text-lg text-gray-700">Find permission slips, packing lists, trip reports, and more for recent and upcoming Troop 185 activities and adventures.</p>
+  
+  {#if events.length > 0}
+    <!-- Events Grid -->
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {#each events as event (event.id)}
+        <EventCard {event} />
+      {/each}
     </div>
-    <div class="bg-white shadow rounded p-4 flex flex-col items-center w-full sm:w-[320px] max-w-xs">
-      <img src="https://www.mytroop185.com/files/2019-08-03_10_15_19_webelso_x_over-jyvmcqdol0pz.png" alt="Webelos Weekend" class="rounded shadow mb-2 w-full object-cover" />
-      <h2 class="text-xl font-semibold mb-1">Webelos Weekend</h2>
-      <a href="#" class="text-blue-600 underline mb-1">Permission Slip</a>
-      <a href="#" class="text-blue-600 underline mb-1">Packing List</a>
+  {:else}
+    <!-- No Events Message -->
+    <div class="text-center py-12">
+      <div class="text-gray-400 mb-4">
+        <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+        </svg>
+      </div>
+      <h3 class="text-xl font-semibold text-gray-600 mb-2">No Events Yet</h3>
+      <p class="text-gray-500">Check back soon for upcoming trips and activities!</p>
     </div>
-    <!-- Add more event cards as needed, using the same structure -->
-  </div>
-  <div class="mt-10 text-center">
+  {/if}
+  
+  <div class="mt-16 text-center">
     <p class="text-sm text-gray-600">Excellence in Boy Scouting by a Boy-Led Troop</p>
   </div>
 </div>
