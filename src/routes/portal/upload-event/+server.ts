@@ -11,7 +11,7 @@ const UploadEventRequestSchema = z.object({
   }),
   location: z.string().optional(),
   participants: z.string().optional(),
-  description: z.string().min(1, 'Description is required'),
+  description: z.string().default(''), // Allow empty description for drafts
   imageAliases: z.record(z.string(), z.string()).default({}) // Maps alias names to base64 data URLs
 });
 
@@ -81,6 +81,9 @@ export async function POST({ request, locals, url }) {
       };
 
       savedEvent = await EventSchema.findByIdAndUpdate(eventId, updateData, { new: true });
+      if (!savedEvent) {
+        throw error(500, 'Failed to update event');
+      }
     } else {
       // Create new event document
       const eventData = {

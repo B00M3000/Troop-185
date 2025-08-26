@@ -17,7 +17,7 @@ const schema = new mongoose.Schema<EventDocumentData>(
     title: { type: String, required: true },
     date: { type: Date, required: true },
     location: { type: String, required: false },
-    body: { type: String, required: true },
+    body: { type: String, required: false, default: '' }, // Optional for drafts
     isDraft: { type: Boolean, required: false, default: false },
     imageAliases: { 
       type: Map, 
