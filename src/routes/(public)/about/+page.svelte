@@ -37,13 +37,13 @@
       <Users class="w-12 h-12 text-blue-700 mb-4" />
       <h3 class="text-xl font-semibold mb-2">Troop Adult Leaders</h3>
       <p class="mb-4 text-center">Meet the dedicated adults who help guide and support Troop 185's scouts and activities.</p>
-      <a href="/troop-adult-leaders" class="mt-auto bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800 transition">View Leaders</a>
+      <a href="/resources/troop-adult-leaders" class="mt-auto bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800 transition">View Leaders</a>
     </div>
     <div class="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center w-full md:w-1/2">
       <UserPlus class="w-12 h-12 text-green-700 mb-4" />
       <h3 class="text-xl font-semibold mb-2">New Enrollment</h3>
       <p class="mb-4 text-center">Ready to join? Learn how to enroll and become part of our troop's adventure and community.</p>
-      <a href="/new-enrollment" class="mt-auto bg-green-700 text-white px-4 py-2 rounded hover:bg-green-800 transition">Join Now</a>
+      <a href="/resources/new-enrollment" class="mt-auto bg-green-700 text-white px-4 py-2 rounded hover:bg-green-800 transition">Join Now</a>
     </div>
   </div>
 </div>

@@ -18,7 +18,7 @@ export async function GET({ params: { imageId }, setHeaders }) {
         "Cache-Control": "public, max-age=1209600", // two weeks cache
     });
 
-    const object = await getObject(image.s3Bucket, image.s3ObjectKey);
+    const object = await getObject(image.s3ObjectKey);
 
     return new Response(object?.Body, {
         status: 200,

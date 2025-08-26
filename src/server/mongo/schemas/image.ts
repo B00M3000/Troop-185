@@ -6,11 +6,10 @@
 
 import mongoose from "mongoose";
 import crypto from 'crypto';
-import { uploadObject } from '@/server/aws';
+import { deleteObject, uploadObject } from '@/server/aws';
 
 interface ImageDocumentData {
     type: string;
-    s3Bucket: string;
     s3ObjectKey: string;
     size: number;
     associatedResourceTag: string;
@@ -19,7 +18,6 @@ interface ImageDocumentData {
 const schema = new mongoose.Schema(
     {
         type: { type: String, required: true },
-        s3Bucket: { type: String, required: true },
         s3ObjectKey: { type: String, required: false },
         size: { type: Number, required: true },
         associatedResourceTag: { type: String, required: true },
@@ -32,7 +30,7 @@ export type ImageDocument = mongoose.HydratedDocument<ImageDocumentData>;
 export const ImageSchema: mongoose.Model<ImageDocumentData> =
     mongoose.models["Images"] || mongoose.model("Images", schema);
 
-import { AWS_S3_BUCKET } from "$env/static/private";
+import { AWS_S3_IMAGES_SUBFOLDER } from "$env/static/private";
 
 export async function uploadImage(dataUrl: string, associatedResourceTag: string) {
     const matches = dataUrl.match(/^data:image\/([a-zA-Z]*);base64,(.*)$/);
@@ -50,15 +48,33 @@ export async function uploadImage(dataUrl: string, associatedResourceTag: string
     const filename = `${timestamp}-${randomId}.${imageType}`;
 
     // Upload to S3
-    await uploadObject(AWS_S3_BUCKET, filename, imageBuffer);
+    await uploadObject(filename, imageBuffer);
 
     const image = await ImageSchema.create({
         type: imageType,
-        s3Bucket: AWS_S3_BUCKET,
         s3ObjectKey: filename,
         size: imageBuffer.length,
         associatedResourceTag,
     });
 
     return image._id.toString();
+}
+
+export async function uploadEventImage(dataUrl: string, eventId: string) {
+    return uploadImage(dataUrl, `event:${eventId}`);
+}
+
+// Delete all images associated with an event
+export async function deleteEventImages(eventId: string) {
+    const images = await ImageSchema.find({
+        associatedResourceTag: `event:${eventId}`
+    });
+
+    await Promise.all(images.map(image => deleteObject(image.s3ObjectKey)));
+
+    await ImageSchema.deleteMany({
+        associatedResourceTag: `event:${eventId}`
+    });
+
+    return images.length;
 }

@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Calendar, MapPin, User } from 'lucide-svelte';
   import Markdown from '@/lib/Markdown.svelte';
-  
+
   export let event: {
     id: string;
     title: string;
@@ -14,7 +14,7 @@
     };
     createdAt: string;
   };
-  
+
   // Format date for display
   function formatDate(dateString: string): string {
     const date = new Date(dateString);
@@ -24,7 +24,7 @@
       day: 'numeric'
     });
   }
-  
+
   // Get first image from markdown for preview
   function getFirstImage(markdown: string): string | null {
     try {
@@ -46,7 +46,7 @@
       return null;
     }
   }
-  
+
   // Get excerpt from markdown (first paragraph or 150 characters)
   function getExcerpt(markdown: string): string {
     try {
@@ -65,7 +65,7 @@
       return 'Event details available...';
     }
   }
-  
+
   const firstImage = getFirstImage(event.body);
   const excerpt = getExcerpt(event.body);
 </script>
@@ -74,8 +74,8 @@
   <!-- Event Image -->
   {#if firstImage}
     <div class="w-full h-48 overflow-hidden">
-      <img 
-        src={firstImage} 
+      <img
+        src={firstImage}
         alt={event.title}
         class="w-full h-full object-cover"
         loading="lazy"
@@ -111,7 +111,7 @@
     <h2 class="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
       {event.title}
     </h2>
-    
+
     <!-- Event Details -->
     <div class="flex flex-col gap-2 mb-4 text-sm text-gray-600">
       <!-- Date -->
@@ -119,7 +119,7 @@
         <Calendar class="w-4 h-4" />
         <span>{formatDate(event.date)}</span>
       </div>
-      
+
       <!-- Location -->
       {#if event.location}
         <div class="flex items-center gap-2">
@@ -127,30 +127,30 @@
           <span>{event.location}</span>
         </div>
       {/if}
-      
+
       <!-- Created By -->
       <div class="flex items-center gap-2">
         <User class="w-4 h-4" />
         <span>Posted by {event.createdBy.name}</span>
       </div>
     </div>
-    
+
     <!-- Event Excerpt -->
-    {#if excerpt}
+    <!-- {#if excerpt}
       <div class="text-gray-700 text-sm mb-4 line-clamp-3">
         {excerpt}
       </div>
-    {/if}
-    
+    {/if} -->
+
     <!-- View Details Link -->
     <div class="flex justify-between items-center">
-      <a 
+      <a
         href="/trips-events/{event.id}"
         class="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md transition-colors duration-200"
       >
         View Details
       </a>
-      
+
       <!-- Event Date Badge -->
       <span class="text-xs text-gray-500">
         {formatDate(event.createdAt)}
@@ -167,7 +167,7 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
-  
+
   .line-clamp-3 {
     display: -webkit-box;
     -webkit-line-clamp: 3;

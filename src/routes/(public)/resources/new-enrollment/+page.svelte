@@ -5,7 +5,7 @@
 <div class="max-w-3xl mx-auto p-6">
   <h1 class="text-3xl font-bold mb-4">JOIN TROOP 185</h1>
   <div class="flex justify-center my-6">
-    <img src="/images/img_3510.jpg" alt="Troop 185 Scouts" class="rounded shadow max-h-64"/>
+    <img src="/images/summer-2024-troop-185-yawgoog-scout-camp.png" alt="Troop 185 Scouts" class="rounded shadow max-h-64"/>
   </div>
   <p class="mb-4">Start by contacting Scoutmaster Jon Flynn:<br/>
     <a href="mailto:scoutmaster@mytroop185.com" class="text-blue-600 underline">scoutmaster@mytroop185.com</a>

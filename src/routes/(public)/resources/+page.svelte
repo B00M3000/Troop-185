@@ -29,7 +29,7 @@
       title: 'Eagle Nest',
       description: 'Resources and materials for Eagle Scouts and candidates.',
       href: '/resources/eagle-nest',
-      image: '/images/2019-08-13_23_27_41_eagle_palms_2017.png', // Placeholder, update if you have a better image
+      image: '/images/eagle-scout-badge.png', 
     },
     {
       title: 'Troop Adult Leaders',

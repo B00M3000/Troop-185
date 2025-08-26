@@ -21,16 +21,9 @@ import {
     AWS_REGION,
     AWS_ACCESS_KEY_ID,
     AWS_SECRET_ACCESS_KEY,
-    AWS_S3_IMAGES_SUBFOLDER
+    AWS_S3_IMAGES_SUBFOLDER,
+    AWS_S3_BUCKET
 } from "$env/static/private";
-
-console.log({
-    region: AWS_REGION,
-    credentials: {
-        accessKeyId: AWS_ACCESS_KEY_ID,
-        secretAccessKey: AWS_SECRET_ACCESS_KEY,
-    },
-})
 
 let client = new S3Client({
     region: AWS_REGION,
@@ -41,14 +34,12 @@ let client = new S3Client({
 });
 
 export async function uploadObject(
-    bucket: string,
     key: string,
     fileBuffer: Buffer,
 ): Promise<PutObjectCommandOutput> {
-    console.log(AWS_S3_IMAGES_SUBFOLDER)
     return client.send(
         new PutObjectCommand({
-            Bucket: bucket,
+            Bucket: AWS_S3_BUCKET,
             Key: AWS_S3_IMAGES_SUBFOLDER != "/" ? path.join(AWS_S3_IMAGES_SUBFOLDER, key) : key,
             Body: fileBuffer,
         }),
@@ -56,24 +47,22 @@ export async function uploadObject(
 }
 
 export async function getObject(
-    bucket: string,
     key: string,
 ): Promise<GetObjectCommandOutput> {
     return client.send(
         new GetObjectCommand({
-            Bucket: bucket,
+            Bucket: AWS_S3_BUCKET,
             Key: AWS_S3_IMAGES_SUBFOLDER != "/" ? path.join(AWS_S3_IMAGES_SUBFOLDER, key) : key,
         }),
     );
 }
 
 export async function deleteObject(
-    bucket: string,
     key: string,
 ): Promise<DeleteObjectCommandOutput> {
     return client.send(
         new DeleteObjectCommand({
-            Bucket: bucket,
+            Bucket: AWS_S3_BUCKET,
             Key: AWS_S3_IMAGES_SUBFOLDER != "/" ? path.join(AWS_S3_IMAGES_SUBFOLDER, key) : key,
         }),
     );

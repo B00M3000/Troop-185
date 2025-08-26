@@ -1,0 +1,17 @@
+deployment:
+  autoCleanup: true
+  dnsCheck: true
+  pushLatest: true
+  tagStrategy: timestamp
+docker:
+  buildArgs: {}
+  buildContext: .
+  localImageName: troop-185
+project:
+  dockerfile: Dockerfile
+  imageName: troop-185
+registry:
+  password: '***Thomas102107'
+  repository: troop-185
+  url: container-registry.tzhou.net
+  username: tzhou

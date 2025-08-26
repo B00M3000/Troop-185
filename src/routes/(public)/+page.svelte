@@ -15,7 +15,7 @@
         <span class="font-semibold">To learn more:</span> <a href="mailto:scoutmaster@mytroop185.com" class="text-blue-600 underline">scoutmaster@mytroop185.com</a>
       </div>
       <div>
-        <span class="font-semibold">Check out our</span> <a href="/calendar" class="text-blue-600 underline">calendar</a> <span class="font-semibold">of meetings and</span> <a href="/trips-events" class="text-blue-600 underline">activities</a>
+        <span class="font-semibold">Check out our</span> <a href="/resources/calendar" class="text-blue-600 underline">calendar</a> <span class="font-semibold">of meetings and</span> <a href="/trips-events" class="text-blue-600 underline">activities</a>
       </div>
     </div>
     <!-- Images -->

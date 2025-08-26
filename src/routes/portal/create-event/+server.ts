@@ -15,7 +15,7 @@ type CreateEventRequest = z.infer<typeof CreateEventRequestSchema>;
 
 export async function POST({ request, locals }) {
   const session = await locals.auth();
-  
+
   if (!session || !session.user) {
     throw error(401, 'Authentication required');
   }
@@ -29,7 +29,7 @@ export async function POST({ request, locals }) {
     // Parse and validate request body with Zod
     const rawData = await request.json();
     const data = CreateEventRequestSchema.parse(rawData);
-    
+
     // Convert validated date string to Date object
     const eventDate = new Date(data.eventDate);
 
@@ -40,7 +40,6 @@ export async function POST({ request, locals }) {
       location: data.location || undefined,
       body: '', // Empty body for draft
       isDraft: true,
-      imageAliases: new Map(), // Empty image aliases for draft
       createdBy: new mongoose.Types.ObjectId(session.user.id)
     };
 
@@ -55,13 +54,13 @@ export async function POST({ request, locals }) {
 
   } catch (err) {
     console.error('Error creating event draft:', err);
-    
+
     // Handle Zod validation errors
     if (err instanceof z.ZodError) {
       const errorMessages = err.errors.map(e => `${e.path.join('.')}: ${e.message}`).join(', ');
       throw error(400, `Validation error: ${errorMessages}`);
     }
-    
+
     throw error(500, 'Failed to create event draft');
   }
 }
