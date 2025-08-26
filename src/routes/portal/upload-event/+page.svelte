@@ -1,23 +1,31 @@
 <script lang="ts">
-  import { Upload, Calendar, MapPin, Users, Eye, Edit3 } from 'lucide-svelte';
+  import { Upload, Calendar, MapPin, Users, Eye, Edit3, Save } from 'lucide-svelte';
   import { marked } from 'marked';
   import DOMPurify from 'dompurify';
   import Markdown from '@/lib/Markdown.svelte';
+  import { goto } from '$app/navigation';
   
-  // Form state
-  let eventTitle = '';
-  let eventDate = '';
-  let location = '';
+  // Props from page.server.ts
+  export let data;
+  
+  // Form state - initialize with existing event data if editing
+  let eventTitle = data.event?.title || '';
+  let eventDate = data.event?.date || '';
+  let location = data.event?.location || '';
   let participants = '';
-  let description = '';
+  let description = data.event?.body || '';
   
   // Image alias storage - maps aliases to base64 data URLs
-  let imageAliases: Record<string, string> = {};
-  let imageCounter = 0;
+  let imageAliases: Record<string, string> = data.event?.imageAliases || {};
+  let imageCounter = Object.keys(imageAliases).length;
   
   // Markdown preview state
   let showPreview = false;
   let isUploading = false;
+  
+  // Editing mode
+  const isEditing = data.isEditing;
+  const eventId = data.event?._id;
   
   // Configure marked options
   marked.setOptions({
@@ -148,10 +156,14 @@
         imageAliases
       };
 
-      console.log('Uploading event:', requestData);
+      console.log(isEditing ? 'Updating event:' : 'Uploading event:', requestData);
 
       // Send POST request to API endpoint
-      const response = await fetch('/portal/upload-event', {
+      const endpoint = isEditing 
+        ? `/portal/upload-event?id=${eventId}` 
+        : '/portal/upload-event';
+        
+      const response = await fetch(endpoint, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -167,25 +179,30 @@
       const result = await response.json();
       
       // Show success message
-      alert(`Event uploaded successfully! ${result.uploadedImages} images were uploaded.`);
+      const message = isEditing 
+        ? `Event updated successfully! ${result.uploadedImages} images were processed.`
+        : `Event uploaded successfully! ${result.uploadedImages} images were uploaded.`;
+      alert(message);
       
-      // Reset form
-      eventTitle = '';
-      eventDate = '';
-      location = '';
-      participants = '';
-      description = '';
-      imageAliases = {};
-      imageCounter = 0;
-      
-      // Optionally redirect to a success page or event list
-      // goto('/portal/events');
+      if (!isEditing) {
+        // Reset form for new events
+        eventTitle = '';
+        eventDate = '';
+        location = '';
+        participants = '';
+        description = '';
+        imageAliases = {};
+        imageCounter = 0;
+      } else {
+        // For edited events, navigate back to portal or event list
+        goto('/portal');
+      }
       
     } catch (error) {
-      console.error('Error uploading event:', error);
+      console.error('Error with event:', error);
       
       // Show user-friendly error message
-      let errorMessage = 'Failed to upload event';
+      let errorMessage = isEditing ? 'Failed to update event' : 'Failed to upload event';
       if (error instanceof Error) {
         errorMessage = error.message;
       }
@@ -201,8 +218,15 @@
   <div class="max-w-[64rem] mx-auto">
     <!-- Header -->
     <div class="mb-8">
-      <h1 class="text-3xl font-bold text-gray-900 mb-2">Upload Trip/Event</h1>
-      <p class="text-gray-600">Share photos and memories from recent trips, campouts, and troop activities.</p>
+      <h1 class="text-3xl font-bold text-gray-900 mb-2">
+        {isEditing ? 'Edit Event' : 'Upload Trip/Event'}
+      </h1>
+      <p class="text-gray-600">
+        {isEditing 
+          ? 'Complete your event with detailed descriptions and photos using our markdown editor.' 
+          : 'Share photos and memories from recent trips, campouts, and troop activities.'
+        }
+      </p>
     </div>
 
     <!-- Upload Form -->
@@ -359,10 +383,15 @@ Use horizontal rules to separate sections"
           >
             {#if isUploading}
               <div class="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
-              Uploading...
+              {isEditing ? 'Updating...' : 'Uploading...'}
             {:else}
-              <Upload class="w-4 h-4 mr-2" />
-              Upload Event
+              {#if isEditing}
+                <Save class="w-4 h-4 mr-2" />
+                Update Event
+              {:else}
+                <Upload class="w-4 h-4 mr-2" />
+                Upload Event
+              {/if}
             {/if}
           </button>
         </div>

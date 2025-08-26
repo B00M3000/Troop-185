@@ -11,13 +11,13 @@ const UploadEventRequestSchema = z.object({
   }),
   location: z.string().optional(),
   participants: z.string().optional(),
-  description: z.string().min(1, 'Description is required'),
+  description: z.string().default(''), // Allow empty description for drafts
   imageAliases: z.record(z.string(), z.string()).default({}) // Maps alias names to base64 data URLs
 });
 
 type UploadEventRequest = z.infer<typeof UploadEventRequestSchema>;
 
-export async function POST({ request, locals }) {
+export async function POST({ request, locals, url }) {
   const session = await locals.auth();
   
   if (!session || !session.user) {
@@ -28,6 +28,9 @@ export async function POST({ request, locals }) {
   if (session.user?.role !== 'ADMIN') {
     throw error(403, 'Access denied. Admin role required.');
   }
+
+  const eventId = url.searchParams.get('id');
+  const isEditing = !!eventId;
 
   try {
     // Parse and validate request body with Zod
@@ -49,18 +52,52 @@ export async function POST({ request, locals }) {
       }
     }
 
-    // Create event document
-    const eventData = {
-      title: data.eventTitle,
-      date: eventDate,
-      body: data.description,
-      location: data.location || undefined,
-      imageAliases: uploadedImageMap, // Store the mapping for potential future use
-      createdBy: new mongoose.Types.ObjectId(session.user.id)
-    };
+    let savedEvent;
 
-    const newEvent = new EventSchema(eventData);
-    const savedEvent = await newEvent.save();
+    if (isEditing) {
+      // Update existing event
+      if (!mongoose.Types.ObjectId.isValid(eventId)) {
+        throw error(400, 'Invalid event ID format');
+      }
+
+      const existingEvent = await EventSchema.findById(eventId);
+      if (!existingEvent) {
+        throw error(404, 'Event not found');
+      }
+
+      // Check if the user is the creator of this event
+      if (existingEvent.createdBy.toString() !== session.user.id) {
+        throw error(403, 'You can only edit events you created');
+      }
+
+      // Update event document
+      const updateData = {
+        title: data.eventTitle,
+        date: eventDate,
+        body: data.description,
+        location: data.location || undefined,
+        isDraft: false, // Mark as published when completing
+        imageAliases: uploadedImageMap,
+      };
+
+      savedEvent = await EventSchema.findByIdAndUpdate(eventId, updateData, { new: true });
+      if (!savedEvent) {
+        throw error(500, 'Failed to update event');
+      }
+    } else {
+      // Create new event document
+      const eventData = {
+        title: data.eventTitle,
+        date: eventDate,
+        body: data.description,
+        location: data.location || undefined,
+        imageAliases: uploadedImageMap,
+        createdBy: new mongoose.Types.ObjectId(session.user.id)
+      };
+
+      const newEvent = new EventSchema(eventData);
+      savedEvent = await newEvent.save();
+    }
 
     await ImageSchema.updateMany({
       _id: { $in: imageIds }
@@ -70,13 +107,13 @@ export async function POST({ request, locals }) {
 
     return json({
       success: true,
-      message: 'Event uploaded successfully',
+      message: isEditing ? 'Event updated successfully' : 'Event uploaded successfully',
       eventId: savedEvent._id.toString(),
       uploadedImages: uploadedImageMap.size
     });
 
   } catch (err) {
-    console.error('Error uploading event:', err);
+    console.error('Error with event:', err);
     
     // Handle Zod validation errors
     if (err instanceof z.ZodError) {
@@ -89,6 +126,6 @@ export async function POST({ request, locals }) {
       throw error(500, `Image upload failed: ${err.message}`);
     }
     
-    throw error(500, 'Failed to upload event');
+    throw error(500, isEditing ? 'Failed to update event' : 'Failed to upload event');
   }
 }
