@@ -32,16 +32,16 @@
       isActive: true,
       allowedRoles: ROLES.UNASSIGNED | ROLES.SCOUT | ROLES.ADULT | ROLES.ADMIN
     },
-    {
-      id: 'documents',
-      title: 'Documents',
-      description: 'Access troop documents and forms.',
-      icon: FileText,
-      color: 'purple',
-      href: '#',
-      isActive: false,
-      allowedRoles: ROLES.UNASSIGNED | ROLES.SCOUT | ROLES.ADULT | ROLES.ADMIN 
-    },
+    // {
+    //   id: 'documents',
+    //   title: 'Documents',
+    //   description: 'Access troop documents and forms.',
+    //   icon: FileText,
+    //   color: 'purple',
+    //   href: '#',
+    //   isActive: false,
+    //   allowedRoles: ROLES.UNASSIGNED | ROLES.SCOUT | ROLES.ADULT | ROLES.ADMIN 
+    // },
     {
       id: 'patrol',
       title: 'My Patrol',

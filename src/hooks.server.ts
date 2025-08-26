@@ -4,8 +4,10 @@ import mongo from "@/server/mongo"
 import type { Handle } from '@sveltejs/kit'
 import type { Session } from '@auth/sveltekit'
 
+let dbPromise = mongo();
+
 const appHandle: Handle = async ({ event, resolve }) => {
-    await mongo()
+    await dbPromise;
     
     const response = await resolve(event)
     return response
