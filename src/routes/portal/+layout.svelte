@@ -88,7 +88,7 @@
               <!-- Dropdown Menu -->
               {#if showUserMenu}
                 <div 
-                  class="absolute right-0 mt-2 w-64 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50"
+                  class="absolute right-0 mt-2 w-64 bg-white rounded-md shadow-lg z-50"
                   transition:slide={{ duration: 200 }}
                 >
                   <div class="py-1">
