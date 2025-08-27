@@ -7,7 +7,7 @@
 
 <div class="flex flex-col min-h-screen">
   <Navbar />
-  <main class="flex-grow">
+  <main class="grow">
     {@render children()}
   </main>
   <Footer />

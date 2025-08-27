@@ -52,11 +52,11 @@
 
 <svelte:document on:click={handleClickOutside} />
 
-<div class="h-screen bg-gray-50 grid grid-rows-[auto,0,1fr]">
+<div class="h-screen bg-gray-50 grid grid-rows-[auto_0_1fr]">
   <!-- Portal Navbar -->
-  <nav class="bg-white shadow-sm border-b z-20 relative">
+  <nav class="bg-white shadow-sm z-20 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="h-16 flex items-center justify-between md:grid md:grid-cols-[1fr,auto,1fr]">
+      <div class="h-16 flex items-center justify-between md:grid md:grid-cols-[1fr_auto_1fr]">
         <!-- Left side - Back to site -->
         <div class="flex items-center">
           <a href="/" class="flex items-center text-gray-600 hover:text-blue-600 transition-colors" data-sveltekit-preload-data>
@@ -155,3 +155,11 @@
     {@render children()}
   </div>
 </div>
+
+<style lang=postcss>
+  @reference "tailwindcss";
+
+  :global(html) {
+    background-color: var(--color-gray-50);
+  }
+</style>

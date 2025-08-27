@@ -1,31 +1,71 @@
 .markdown-body {
-color:#444;
-font-family:Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
-font-size:20px;
-line-height:1.5em;
-padding:1em;
-margin:auto;
-max-width: 36em;
-background:#fefefe;
+  color: #444;
+  font-family: Roboto, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
+  font-size: 21px;
+  line-height: 1.6;
+  padding: 1rem;
+  margin: auto;
+  max-width: 72rem;
+  background: #fefefe;
 }
 
-.markdown-body a { color: #0645ad; text-decoration: none; }
-.markdown-body a:visited { color: #0b0080; }
-.markdown-body a:hover { color: #06e; }
-.markdown-body a:active { color: #faa700; }
-.markdown-body a:focus { outline: thin dotted; }
+.markdown-body a {
+  color: #0645ad;
+  text-decoration: none;
+}
+
+.markdown-body a:visited {
+  color: #0b0080;
+}
+
+.markdown-body a:hover {
+  color: #06e;
+}
+
+.markdown-body a:active {
+  color: #faa700;
+}
+
+.markdown-body a:focus {
+  outline: thin dotted;
+}
+
 .markdown-body a:hover,
-.markdown-body a:active { outline: 0; }
+.markdown-body a:active {
+  outline: 0;
+}
 
-.markdown-body ::-moz-selection { background: rgba(255,255,0,0.3); color: #000; }
-.markdown-body ::selection { background: rgba(255,255,0,0.3); color: #000; }
+.markdown-body ::-moz-selection {
+  background: rgba(255, 255, 0, 0.3);
+  color: #000;
+}
 
-.markdown-body a::-moz-selection { background: rgba(255,255,0,0.3); color: #0645ad; }
-.markdown-body a::selection { background: rgba(255,255,0,0.3); color: #0645ad; }
+.markdown-body ::selection {
+  background: rgba(255, 255, 0, 0.3);
+  color: #000;
+}
 
-.markdown-body p { margin: 1em 0; }
+.markdown-body a::-moz-selection {
+  background: rgba(255, 255, 0, 0.3);
+  color: #0645ad;
+}
 
-.markdown-body img { max-width: 100%; border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; padding: 1em; }
+.markdown-body a::selection {
+  background: rgba(255, 255, 0, 0.3);
+  color: #0645ad;
+}
+
+.markdown-body p {
+  margin: 1rem 0;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+  vertical-align: middle;
+  padding: 1rem;
+}
 
 .markdown-body h1,
 .markdown-body h2,
@@ -35,33 +75,86 @@ background:#fefefe;
 .markdown-body h6 {
   font-weight: normal;
   color: #111;
-  line-height: 1em;
+  line-height: 1rem;
 }
+
 .markdown-body h4,
 .markdown-body h5,
-.markdown-body h6 { font-weight: bold; }
-.markdown-body h1 { font-size: 2.5em; }
-.markdown-body h2 { font-size: 2em; }
-.markdown-body h3 { font-size: 1.5em; }
-.markdown-body h4 { font-size: 1.2em; }
-.markdown-body h5 { font-size: 1em; }
-.markdown-body h6 { font-size: 0.9em; }
+.markdown-body h6 {
+  font-weight: bold;
+}
+
+.markdown-body h1 {
+  font-size: 2.4rem;
+}
+
+.markdown-body h2 {
+  font-size: 2rem;
+}
+
+.markdown-body h3 {
+  font-size: 1.5rem;
+}
+
+.markdown-body h4 {
+  font-size: 1.2rem;
+}
+
+.markdown-body h5 {
+  font-size: 1rem;
+}
+
+.markdown-body h6 {
+  font-size: 0.9rem;
+}
+
+/* Improved spacing and readability for headings */
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.25;
+}
+
+/* Slightly larger top spacing for major headings */
+.markdown-body h1 {
+  margin-top: 2rem;
+}
+
+.markdown-body h2 {
+  margin-top: 1.75rem;
+}
+
+/* Trim extra space at the container edges */
+.markdown-body> :first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body> :last-child {
+  margin-bottom: 0 !important;
+}
 
 .markdown-body blockquote {
   color: #666666;
   margin: 0;
-  padding-left: 3em;
-  border-left: 0.5em #EEE solid;
+  padding-left: 3rem;
+  border-left: 0.5rem #EEE solid;
 }
+
 .markdown-body hr {
   display: block;
   height: 2px;
   border: 0;
   border-top: 1px solid #aaa;
   border-bottom: 1px solid #eee;
-  margin: 1em 0;
+  margin: 1rem 0;
   padding: 0;
 }
+
 .markdown-body pre,
 .markdown-body code,
 .markdown-body kbd,
@@ -69,8 +162,9 @@ background:#fefefe;
   color: #000;
   font-family: monospace, monospace;
   _font-family: 'courier new', monospace;
-  font-size: 0.98em;
+  font-size: 1.1rem;
 }
+
 .markdown-body pre {
   white-space: pre;
   white-space: pre-wrap;
@@ -78,13 +172,26 @@ background:#fefefe;
 }
 
 .markdown-body b,
-.markdown-body strong { font-weight: bold; }
+.markdown-body strong {
+  font-weight: bold;
+}
 
-.markdown-body dfn { font-style: italic; }
+.markdown-body dfn {
+  font-style: italic;
+}
 
-.markdown-body ins { background: #ff9; color: #000; text-decoration: none; }
+.markdown-body ins {
+  background: #ff9;
+  color: #000;
+  text-decoration: none;
+}
 
-.markdown-body mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
 
 .markdown-body sub,
 .markdown-body sup {
@@ -93,49 +200,126 @@ background:#fefefe;
   position: relative;
   vertical-align: baseline;
 }
-.markdown-body sup { top: -0.5em; }
-.markdown-body sub { bottom: -0.25em; }
+
+.markdown-body sup {
+  top: -0.5rem;
+}
+
+.markdown-body sub {
+  bottom: -0.25rem;
+}
 
 .markdown-body ul,
-.markdown-body ol { margin: 1em 0; padding: 0 0 0 2em; }
-.markdown-body li p:last-child { margin: 0; }
-.markdown-body dd { margin: 0 0 0 2em; }
+.markdown-body ol {
+  margin: 1rem 0;
+  padding: 0 0 0 2rem;
+}
+
+.markdown-body li p:last-child {
+  margin: 0;
+}
+
+.markdown-body dd {
+  margin: 0 0 0 2rem;
+}
 
 .markdown-body table {
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
 }
-.markdown-body th { border-bottom: 1px solid black; }
-.markdown-body td { vertical-align: top; }
+
+.markdown-body th {
+  border-bottom: 1px solid black;
+}
+
+.markdown-body td {
+  vertical-align: top;
+}
 
 @media only screen and (min-width: 480px) {
-  .markdown-body { font-size: 14px; }
+  .markdown-body {
+    font-size: 18px;
+  }
 }
+
 @media only screen and (min-width: 768px) {
-  .markdown-body { font-size: 16px; }
+  .markdown-body {
+    font-size: 20px;
+  }
 }
+
 @media print {
-  .markdown-body * { background: transparent !important; color: black !important; filter: none !important; -ms-filter: none !important; }
-  .markdown-body { font-size: 12pt; max-width: 100%; }
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size: 12pt;
+    max-width: 100%;
+  }
+
   .markdown-body a,
-  .markdown-body a:visited { text-decoration: underline; }
-  .markdown-body hr { height: 1px; border: 0; border-bottom: 1px solid black; }
-  .markdown-body a[href]:after { content: " (" attr(href) ")"; }
-  .markdown-body abbr[title]:after { content: " (" attr(title) ")"; }
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body hr {
+    height: 1px;
+    border: 0;
+    border-bottom: 1px solid black;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
   .markdown-body .ir a:after,
   .markdown-body a[href^="javascript:"]:after,
-  .markdown-body a[href^="#"]:after { content: ""; }
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
   .markdown-body pre,
-  .markdown-body blockquote { border: 1px solid #999; padding-right: 1em; page-break-inside: avoid; }
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1rem;
+    page-break-inside: avoid;
+  }
+
   .markdown-body tr,
-  .markdown-body img { page-break-inside: avoid; }
-  .markdown-body img { max-width: 100% !important; }
-  @page :left { margin: 15mm 20mm 15mm 10mm; }
-  @page :right { margin: 15mm 10mm 15mm 20mm; }
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  @page :left {
+    margin: 15mm 20mm 15mm 10mm;
+  }
+
+  @page :right {
+    margin: 15mm 10mm 15mm 20mm;
+  }
+
   .markdown-body p,
   .markdown-body h2,
-  .markdown-body h3 { orphans: 3; widows: 3; }
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
   .markdown-body h2,
-  .markdown-body h3 { page-break-after: avoid; }
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
 }

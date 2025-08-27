@@ -60,7 +60,7 @@
     <subtitle class="text-lg text-gray-600 mb-4">{meeting.date.toLocaleDateString('en', { dateStyle: 'long' })}</subtitle>
     <div class="flex flex-col items-start">
         <h3 class="text-2xl mb-6">Schedule</h3>
-        <div class="grid grid-cols-[auto,_auto] gap-x-8 gap-y-4 ">
+        <div class="grid grid-cols-[auto_auto] gap-x-8 gap-y-4 ">
             {#each meeting.blocks as block}
             {#if block.type == "Preopening"}
             <BasicBlock color="bg-gray-200" {block} />

@@ -73,7 +73,7 @@
 </svelte:head>
 
 <div class="min-h-screen bg-gray-50">
-  <div class="max-w-4xl mx-auto py-8 px-6">
+  <div class="max-w-5xl mx-auto py-8 px-6">
     <!-- Back Button -->
     <div class="mb-6">
       <a 
@@ -88,7 +88,7 @@
     <!-- Event Header -->
     <div class="bg-white rounded-lg shadow-lg overflow-hidden">
       <!-- Event Title Section -->
-      <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-8">
+      <div class="bg-linear-to-r from-blue-600 to-blue-800 text-white p-8">
         <h1 class="text-3xl font-bold mb-4">{event.title}</h1>
         
         <!-- Event Meta Information -->

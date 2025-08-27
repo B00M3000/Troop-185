@@ -70,12 +70,12 @@
   <!-- Progress bar for countdown -->
   {#if timeout > 0}
     <div 
-      class="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-gray-400 to-gray-600 transition-all duration-1000 ease-linear"
+      class="absolute bottom-0 left-0 h-1 bg-linear-to-r from-gray-400 to-gray-600 transition-all duration-1000 ease-linear"
       style="width: {(timeRemaining / (timeout / 1000)) * 100}%"
     ></div>
   {/if}
   
-  <IconComponent class="h-5 w-5 {notificationConfig.iconColor} mt-0.5 flex-shrink-0" />
+  <IconComponent class="h-5 w-5 {notificationConfig.iconColor} mt-0.5 shrink-0" />
   <div class="ml-3 flex-1">
     <div class="flex items-center justify-between">
       <p class="text-sm font-medium {notificationConfig.textColor}">

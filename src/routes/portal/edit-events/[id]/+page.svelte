@@ -342,8 +342,8 @@
   }
 </script>
 
-<main class="bg-gray-50 min-h-screen py-6 px-6">
-  <div class="max-w-[90rem] mx-auto mt-16">
+<main class="bg-gray-50 h-full py-6 px-6 flex flex-col items-center justify-center overflow-y-auto overflow-hidden">
+  <div class="max-w-[96rem] my-16">
     <!-- Header -->
     <div class="mb-6 flex items-center justify-between">
       <div class="grid grid-cols-[1fr_auto_1fr] w-full space-x-4">
@@ -356,15 +356,15 @@
             Back to Events
           </button>
         </div>
-        <div>
-          <h1 class="text-2xl font-bold text-gray-900">Edit Event</h1>
-          <p class="text-gray-600 text-sm">Manage event details and images</p>
+        <div class="flex flex-col items-center gap-1">
+          <h1 class="text-3xl font-bold text-gray-900">Edit Event</h1>
+          <p class="text-gray-600 text-base">Manage event details and images</p>
         </div>
       </div>
     </div>
 
     <!-- Main Content - Side by Side Layout -->
-    <div class="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-6 h-[75vh]">
+    <div class="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-6">
       <!-- Left Side - Event Form -->
       <div class="bg-white rounded-lg shadow-sm border border-gray-200">
         <div class="p-6">
@@ -468,7 +468,7 @@
                       id="description"
                       bind:value={description}
                       placeholder="Describe your event here using Markdown...\n\n**Bold text** and *italic text*\n# Headings\n- Bullet points\n1. Numbered lists\n[Links](https://example.com)\n![Images](image-url)\n\nUse the image manager on the right to upload images and copy their markdown!"
-                      class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent font-mono text-sm h-[36rem]"
+                      class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent font-mono text-sm h-144"
                       rows="10"
                       required
                     ></textarea>
@@ -480,7 +480,7 @@
                 {:else}
                   <!-- Markdown Preview -->
                   <div
-                    class="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-50 min-h-[240px]"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-50 min-h-[240px] max-w-5xl"
                   >
                     <div class="prose prose-sm max-w-none">
                       {#if description.trim()}
@@ -591,7 +591,7 @@
                   class="flex items-center space-x-3 p-3 border border-gray-200 rounded-lg hover:border-gray-300 transition-colors"
                 >
                   <!-- Thumbnail -->
-                  <div class="flex-shrink-0">
+                  <div class="shrink-0">
                     <img
                       src={image.url}
                       alt={image.filename}

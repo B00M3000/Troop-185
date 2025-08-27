@@ -249,7 +249,7 @@
             <div class="flex items-center justify-between">
               <div class="flex items-center">
                 <!-- User Avatar -->
-                <div class="flex-shrink-0 h-12 w-12">
+                <div class="shrink-0 h-12 w-12">
                   {#if user.image}
                     <img class="h-12 w-12 rounded-full" src={user.image} alt="{user.name}" />
                   {:else}
@@ -289,7 +289,7 @@
               </div>
               
               <!-- Actions -->
-              <div class="flex items-center space-x-2 flex-shrink-0">
+              <div class="flex items-center space-x-2 shrink-0">
                 <!-- Role Change Dropdown -->
                 <div class="relative">
                   <select 
