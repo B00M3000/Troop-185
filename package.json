@@ -8,7 +8,8 @@
         "preview": "vite preview --host --port 3000",
         "build-and-preview": "vite build && vite preview --host --port 3000",
         "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-        "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+        "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+        "prod": "vite build && node -r dotenv/config ./build"
     },
     "devDependencies": {
         "@sveltejs/adapter-node": "^5.3.1",
