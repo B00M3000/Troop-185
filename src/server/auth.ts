@@ -32,7 +32,8 @@ export const { handle, signIn, signOut } = SvelteKitAuth({
         params: {
           scope: "openid email profile"
         }
-      }
+      },
+      allowDangerousEmailAccountLinking: true
     })
   ],
   secret: AUTH_SECRET,
@@ -51,7 +52,7 @@ export const { handle, signIn, signOut } = SvelteKitAuth({
             session.user.id = dbUser._id.toString()
             session.user.role = dbUser.role
             session.user.image = dbUser.image
-            
+
             // Update lastActive
             await UserSchema.findByIdAndUpdate(dbUser._id, {
               lastActive: new Date()
@@ -74,7 +75,7 @@ export const { handle, signIn, signOut } = SvelteKitAuth({
 
           // Check if user exists in our custom schema
           let existingUser = await UserSchema.findOne({ email: user.email })
-          
+
           if (!existingUser) {
             // Create new user with default UNASSIGNED role and profile info
             existingUser = new UserSchema({
@@ -93,7 +94,7 @@ export const { handle, signIn, signOut } = SvelteKitAuth({
               lastActive: new Date()
             })
           }
-          
+
           return true
         } catch (error) {
           console.error('Error in signIn callback:', error)
