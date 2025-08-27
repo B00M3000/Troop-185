@@ -1,6 +1,7 @@
-<script lang="ts">
+<script lang=ts>
   import { Calendar, MapPin, User } from 'lucide-svelte';
   import Markdown from '@/lib/Markdown.svelte';
+  import { PUBLIC_ORIGIN } from '$env/static/public';
 
   export let event: {
     id: string;
@@ -33,7 +34,7 @@
         const url = imageMatch[1].trim();
         // Validate URL before returning
         try {
-          new URL(url);
+          new URL(url, PUBLIC_ORIGIN);
           return url;
         } catch {
           console.warn('Invalid image URL found:', url);
@@ -98,10 +99,10 @@
   {:else}
     <!-- Placeholder if no image -->
     <div class="w-full h-48 bg-linear-to-br from-blue-100 to-blue-200 flex items-center justify-center">
-      <div class="text-blue-600 text-center">
+      <!-- <div class="text-blue-600 text-center">
         <Calendar class="w-12 h-12 mx-auto mb-2" />
         <p class="text-sm font-medium">Event Photo</p>
-      </div>
+      </div> -->
     </div>
   {/if}
 
