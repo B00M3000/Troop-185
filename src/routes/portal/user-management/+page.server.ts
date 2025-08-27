@@ -43,7 +43,7 @@ export const load = async ({ locals, depends }) => {
 
     // Fetch auth.js sessions and accounts for display (read-only)
     const client = mongoose.connection.getClient()
-    const db = client.db('Development1')
+    const db = client.db()
     
     const sessions = await db.collection('sessions').find({}).toArray()
     const accounts = await db.collection('accounts').find({}).toArray()
@@ -160,7 +160,7 @@ export const actions = {
 
       // Revoke all sessions for this user by deleting them from auth.js sessions
       const client = mongoose.connection.getClient()
-      const db = client.db('Development1')
+      const db = client.db()
       
       // Find the corresponding Auth.js user to get their ObjectId
       const authUser = await db.collection('users').findOne({ email: user.email })

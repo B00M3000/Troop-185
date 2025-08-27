@@ -3,15 +3,15 @@
   import { page } from '$app/stores'
 
   const handleGoogleSignIn = () => {
-    signIn('google', { 
-      callbackUrl: '/portal',
-      redirect: true 
+    signIn('google', {
+      redirectTo: '/portal',
+      redirect: true
     })
   }
 
   // Get error from URL params
   $: error = $page.url.searchParams.get('error')
-  
+
   const getErrorMessage = (error: string | null) => {
     switch (error) {
       case 'OAuthAccountNotLinked':
@@ -48,7 +48,7 @@
       </div>
     {/if}
 
-    <button 
+    <button
       onclick={handleGoogleSignIn}
       class="w-full bg-white hover:bg-gray-50 text-gray-700 font-semibold py-3 px-4 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200 flex items-center justify-center gap-3"
     >

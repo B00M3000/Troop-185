@@ -24,7 +24,7 @@ export async function POST({ locals, request }) {
 
     // Revoke all sessions for this user by deleting them from auth.js sessions
     const client = mongoose.connection.getClient()
-    const db = client.db('Development1')
+    const db = client.db()
     
     // Find the corresponding Auth.js user to get their ObjectId
     const authUser = await db.collection('users').findOne({ email: user.email })

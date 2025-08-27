@@ -13,10 +13,10 @@ const schema = new mongoose.Schema<UserDocumentData>(
   {
     name: { type: String, required: false },
     email: { type: String, required: true, unique: true },
-    image: { type: String, required: false }, // Google profile picture URL
+    image: { type: String, required: false }, 
     role: { type: String, enum: ["UNASSIGNED", "SCOUT", "ADULT", "ADMIN"], required: true },
     lastActive: { type: Date },
-    annotation: { type: String, required: false } // Admin notes about the user
+    annotation: { type: String } // Admin notes about the user
   },
   { timestamps: true }
 );

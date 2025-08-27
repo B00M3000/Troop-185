@@ -4,7 +4,7 @@ import { MongoDBAdapter } from "@auth/mongodb-adapter"
 import { MongoClient } from "mongodb"
 import mongo from "@/server/mongo"
 import mongoose from "mongoose"
-import { GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, AUTH_SECRET, MONGO_URI } from "$env/static/private"
+import { GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, AUTH_SECRET, MONGO_URI, AUTH_TRUST_HOST } from "$env/static/private"
 import { UserSchema } from "@/server/mongo/schemas/user"
 import type { DefaultSession } from "@auth/core/types"
 
@@ -23,10 +23,7 @@ const client = new MongoClient(MONGO_URI)
 const clientPromise = client.connect()
 
 export const { handle, signIn, signOut } = SvelteKitAuth({
-  adapter: MongoDBAdapter(clientPromise, {
-    databaseName: "Development1"
-  }),
-  trustHost: true,
+  adapter: MongoDBAdapter(clientPromise),
   providers: [
     Google({
       clientId: GOOGLE_CLIENT_ID,
@@ -35,15 +32,15 @@ export const { handle, signIn, signOut } = SvelteKitAuth({
         params: {
           scope: "openid email profile"
         }
-      },
-      allowDangerousEmailAccountLinking: true // Allow direct linking of accounts with the same email
+      }
     })
   ],
   secret: AUTH_SECRET,
   session: {
     strategy: "database",
-    maxAge: 7 * 24 * 60 * 60, // 7 days
+    maxAge: 7 * 24 * 60 * 60 // 7 days
   },
+  trustHost: AUTH_TRUST_HOST == "true",
   callbacks: {
     async session({ session, user }) {
       if (session.user?.email) {
