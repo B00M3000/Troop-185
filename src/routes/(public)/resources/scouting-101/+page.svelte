@@ -33,7 +33,4 @@
       <span class="text-sm text-gray-600">Please complete the forms and give them to the Scoutmaster. Easy as that!</span>
     </div>
   </div>
-  <div class="mt-10 text-center">
-    <p class="text-sm text-gray-600">Excellence in Boy Scouting by a Boy-Led Troop</p>
-  </div>
 </div>

@@ -32,7 +32,7 @@
     </div>
     <div class="max-w-5xl mx-auto flex flex-wrap justify-between items-center gap-8 px-4 mt-8 border-t border-gray-700 pt-6">
         <div class="flex items-center gap-2 text-yellow-300 text-lg font-semibold">
-            <Star class="w-5 h-5 animate-pulse"/> Excellence in Boy Scouting by a Boy-Led Troop
+            <Star class="w-5 h-5 animate-pulse"/> Excellence in Scouting by a Youth Led Troop
         </div>
         <div class="flex gap-x-4 gap-y-2 text-sm flex-wrap text-gray-300">
             <a href="/" class="hover:text-yellow-300 transition-colors">Home</a>

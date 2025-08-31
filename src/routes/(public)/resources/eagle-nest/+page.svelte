@@ -21,6 +21,5 @@
   </ul>
   <div class="flex flex-col items-center mt-8">
     <img src="https://www.mytroop185.com/files/2019-08-08_14_53_19_eagle_1-jz31hf7zs4ae.png" alt="Eagle" class="w-64 rounded shadow mb-4" />
-    <p class="text-sm text-gray-600">Excellence in Boy Scouting by a Boy-Led Troop</p>
   </div>
 </div>

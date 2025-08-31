@@ -15,18 +15,18 @@
           <li>Mr. Stephen T. Maire</li>
           <li>Mr. Pete Blumenthal</li>
           <li>Ms. Ann C. King</li>
-          <li>Mr Kevin Daly</li>
+          <li>Dr. Kevin Daly</li>
           <li>Mr. Frank Wood</li>
+          <li>Mr. Steve Benson</li>
         </ul>
       </div>
       <div>
-        <h3 class="text-lg font-semibold text-gray-800 mb-2">Troop Committee Chairs</h3>
+        <h3 class="text-lg font-semibold text-gray-800 mb-2">Troop Committee Chair</h3>
         <ul class="list-disc list-inside mb-4 text-gray-700">
-          <li>Maureen Gordon</li>
           <li>Elizabeth Ohaegbulam</li>
         </ul>
         <h3 class="text-lg font-semibold text-gray-800 mb-2">Treasurer</h3>
-        <p class="mb-4">Craig McCurley</p>
+        <p class="mb-4">Daniel Sciortino</p>
         <h3 class="text-lg font-semibold text-gray-800 mb-2">Chartered Organization Representative</h3>
         <p class="mb-4">Stephen Scherrer</p>
       </div>
@@ -34,13 +34,5 @@
     <div class="flex justify-center my-8">
       <img src="/images/2019-08-13_22_04_07_snoopy_hat_w_scouts-jzam2ubta9ka.png" alt="Snoopy Hat with Scouts" class="rounded shadow max-h-64 border"/>
     </div>
-    <div class="flex flex-col items-center gap-2">
-      <a href="mailto:scoutmaster@mytroop185.com" class="text-blue-600 hover:underline text-lg font-medium">scoutmaster@mytroop185.com</a>
-      <span class="text-gray-500 text-sm">Meetings Location: St. Paul's Church, 502 Washington Street, Wellesley, MA</span>
-      <span class="text-gray-500 text-sm">Monday Evenings, 7:30 PM to 9:00 PM</span>
-    </div>
-  </div>
-  <div class="text-center text-gray-600 italic mt-8">
-    Excellence in Boy Scouting by a Boy-Led Troop
   </div>
 </div>

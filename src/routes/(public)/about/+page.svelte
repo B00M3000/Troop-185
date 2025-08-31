@@ -18,8 +18,8 @@
     <!-- Right: Content -->
     <div class="flex flex-col gap-8 lg:w-1/2">
       <div>
-        <h2 class="text-2xl font-bold text-blue-700 mb-2">Boy Scouting</h2>
-        <p>Troop 185 Wellesley is the traditional Scouting experience for boys in the fifth grade through high school. Service, community engagement and leadership development become increasingly important parts of the program as youth lead their own and work their way toward earning Scouting’s highest rank, Eagle Scout.</p>
+        <h2 class="text-2xl font-bold text-blue-700 mb-2">Scouting America</h2>
+        <p>Troop 185 Wellesley is the traditional Scouts BSA experience for boys and girls in the sixth grade through high school. Service, community engagement and leadership development become increasingly important parts of the program as youth lead their own and work their way toward earning Scouting’s highest rank, Eagle Scout.</p>
       </div>
       <div>
         <blockquote class="italic border-l-4 border-blue-500 pl-4 mb-4">“One of the biggest gifts that we can give our son is the gift of independence, and Scouting has provided us that platform to where he gets to learn, develop, and grow the skills he needs and to prove to himself that he can indeed be not only independent, but also flourish”<br/><span class="block mt-2 font-semibold">— Eagle Scout's Parent</span></blockquote>

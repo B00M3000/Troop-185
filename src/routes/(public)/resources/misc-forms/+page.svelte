@@ -24,6 +24,5 @@
   </ul>
   <div class="flex flex-col items-center mt-8">
     <img src="https://www.mytroop185.com/files/2019-08-05_13_29_18_pot_of_fire-jyyo5y53ufnn.jpg" alt="Pot of Fire" class="w-64 rounded shadow mb-4" />
-    <p class="text-sm text-gray-600">Excellence in Boy Scouting by a Boy-Led Troop</p>
   </div>
 </div>

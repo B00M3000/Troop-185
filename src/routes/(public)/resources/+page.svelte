@@ -11,7 +11,7 @@
       title: 'Scouting 101',
       description: 'Basics and resources for new scouts and families.',
       href: '/resources/scouting-101',
-      image: '/images/summer-2024-troop-185-yawgoog-scout-camp.png', // Placeholder
+      image: '/images/2025-yawgoog-troop-185.png', // Placeholder
     },
     {
       title: 'Troop 185 Calendar',
@@ -23,7 +23,7 @@
       title: 'Miscellaneous Forms',
       description: 'Important forms and documents for scouts and families.',
       href: '/resources/misc-forms',
-      image: '/images/2019-08-13_22_04_07_snoopy_hat_w_scouts-jzam2ubta9ka.png', // Placeholder
+      image: '/images/summer-2024-troop-185-yawgoog-scout-camp.png', // Placeholder
     },
     {
       title: 'Eagle Nest',
