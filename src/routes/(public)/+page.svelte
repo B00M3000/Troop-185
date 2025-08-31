@@ -25,7 +25,7 @@
         <span class="text-center text-base font-medium">Summer 2025 Troop 185 Yawgoog Scout Camp</span>
       </div>
       <div class="flex flex-col items-center">
-        <img src="/images/2025-maine-ha.png" alt="2024 Troop 185 Yellowstone High Adventure Trip" class="rounded shadow mb-2 w-full object-cover" />
+        <img src="/images/2025-maine-ha.jpg" alt="2024 Troop 185 Maine High Adventure Trip" class="rounded shadow mb-2 w-full object-cover" />
         <span class="text-center text-base font-medium">2025 Troop 185 Maine High Adventure Trip</span>
       </div>
     </div>
