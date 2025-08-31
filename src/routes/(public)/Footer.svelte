@@ -2,7 +2,7 @@
     import { Instagram, Mail, MapPin, Clock, Star } from "lucide-svelte";
 </script>
 
-<footer class="bg-linear-to-br from-blue-900 via-blue-800 to-gray-900 text-white px-12 py-10 border-t-4 border-yellow-400 shadow-2xl mt-12">
+<footer class="bg-linear-to-br from-blue-900 via-blue-800 to-gray-900 text-white px-12 py-4 border-t-4 border-yellow-400 shadow-2xl mt-12">
     <div class="max-w-5xl mx-auto flex flex-wrap justify-between items-center gap-16 px-4">
         <a class="flex items-center gap-4 hover:scale-105 transition-transform duration-200" href="/">
             <img src="/logo.png" alt="Troop 185 Logo" class="w-16 h-16 rounded-full border-2 border-yellow-400 shadow-lg bg-white p-1" />
@@ -30,7 +30,7 @@
             </div>
         </div>
     </div>
-    <div class="max-w-5xl mx-auto flex flex-wrap justify-between items-center gap-8 px-4 mt-8 border-t border-gray-700 pt-6">
+    <div class="max-w-5xl mx-auto flex flex-wrap justify-between items-center gap-0 px-4 mt-1 border-t border-gray-700 pt-2">
         <div class="flex items-center gap-2 text-yellow-300 text-lg font-semibold">
             <Star class="w-5 h-5 animate-pulse"/> Excellence in Scouting by a Youth Led Troop
         </div>
