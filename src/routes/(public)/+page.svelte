@@ -21,12 +21,12 @@
     <!-- Images -->
     <div class="flex flex-col gap-8 items-center lg:max-w-xs w-full">
       <div class="flex flex-col items-center mb-2">
-        <img src="/images/summer-2024-troop-185-yawgoog-scout-camp.png" alt="Summer 2024 Troop 185 Yawgoog Scout Camp" class="rounded shadow mb-2 w-full object-cover" />
-        <span class="text-center text-base font-medium">Summer 2024 Troop 185 Yawgoog Scout Camp</span>
+        <img src="/images/2025-yawgoog-troop-185.png" alt="Summer 2025 Troop 185 Yawgoog Scout Camp" class="rounded shadow mb-2 w-full object-cover" />
+        <span class="text-center text-base font-medium">Summer 2025 Troop 185 Yawgoog Scout Camp</span>
       </div>
       <div class="flex flex-col items-center">
-        <img src="/images/2024-troop-185-yellowstone-high-adventure-trip.png" alt="2024 Troop 185 Yellowstone High Adventure Trip" class="rounded shadow mb-2 w-full object-cover" />
-        <span class="text-center text-base font-medium">2024 Troop 185 Yellowstone High Adventure Trip</span>
+        <img src="/images/2025-maine-ha.png" alt="2024 Troop 185 Yellowstone High Adventure Trip" class="rounded shadow mb-2 w-full object-cover" />
+        <span class="text-center text-base font-medium">2025 Troop 185 Maine High Adventure Trip</span>
       </div>
     </div>
   </div>
