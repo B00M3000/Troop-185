@@ -3,7 +3,7 @@
     <!-- Main Content -->
     <div class="flex-1 min-w-0">
       <h1 class="font-bold text-3xl mb-4">Welcome to the 2025-26 Scouting year.</h1>
-      <p class="mb-4 text-lg">Troop 185 welcomes boys and girsl age 11 and up to learn more about Scouting in Wellesley, MA!</p>
+      <p class="mb-4 text-lg">Troop 185 welcomes boys and girls age 11 and up to learn more about Scouting in Wellesley, MA!</p>
       <p class="mb-4 text-lg">Real-world leadership development, useful life skills, epic outdoor adventures, impactful community service opportunities close to home.</p>
       <div class="mb-4 flex flex-col gap-2">
         <p class="mb-1"><span class="font-semibold">When:</span> Mondays from 7:30pm to 9:00pm, plus weekend outings about once a month (many of our Scouts participate in multiple sports and other activities - perfect attendance is not required or expected)</p>

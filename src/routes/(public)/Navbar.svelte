@@ -11,7 +11,7 @@
       { name: 'About', href: '/about', icon: Info },
       // { name: 'Contact', href: '/contact', icon: Mail },
       { name: 'Trips and Events', href: '/trips-events', icon: Calendar },
-      { name: 'Scouting Resources', href: '/resources', icon: BookOpen },
+      { name: 'Resources', href: '/resources', icon: BookOpen },
       // { name: 'Scouting', href: '/scouting-101', icon: BookOpen },
       // { name: 'Forms', href: '/misc-forms', icon: FileText },
       // { name: 'Eagle Nest', href: '/eagle-nest', icon: Feather },
