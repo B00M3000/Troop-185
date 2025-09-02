@@ -1,4 +1,4 @@
-<div class="flex justify-center w-full bg-white py-10 px-4">
+<div class="flex justify-center w-full bg-white py-4 px-4">
   <div class="flex flex-col lg:flex-row m-4 gap-12 max-w-6xl w-full">
     <!-- Main Content -->
     <div class="flex-1 min-w-0">
