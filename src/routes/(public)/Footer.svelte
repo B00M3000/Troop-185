@@ -35,7 +35,7 @@
             <Star class="w-5 h-5 animate-pulse"/> Excellence in Scouting by a Youth Led Troop
         </div>
         <div class="flex gap-x-4 gap-y-2 text-sm flex-wrap text-gray-300">
-            <a href="/faq" class="hover:text-yellow-300 transition-colors">FAQ</a>
+            <a href="/resources/faq" class="hover:text-yellow-300 transition-colors">FAQ</a>
             <a href="/trips-events" class="hover:text-yellow-300 transition-colors">Trips & Events</a>
             <a href="/calendar" class="hover:text-yellow-300 transition-colors">Calendar</a>
             <a href="/misc-forms" class="hover:text-yellow-300 transition-colors">Forms & Docs</a>

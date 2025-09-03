@@ -8,9 +8,9 @@
       image: '/images/2024-troop-185-yellowstone-high-adventure-trip.png', // Placeholder
     },
     {
-      title: 'Scouting 101',
-      description: 'Basics and resources for new scouts and families.',
-      href: '/resources/scouting-101',
+      title: 'FAQ',
+      description: 'Frequently Asked Questions for new scouts and families.',
+      href: '/resources/faq',
       image: '/images/2025-yawgoog-troop-185.png', // Placeholder
     },
     {
