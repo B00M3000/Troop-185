@@ -9,7 +9,7 @@
 
 <div class="max-w-6xl mx-auto p-6">
   <h1 class="text-3xl font-bold mb-6 text-blue-800">Trips & Events</h1>
-  <p class="mb-8 text-lg text-gray-700">Find permission slips, packing lists, trip reports, and more for recent and upcoming Troop 185 activities and adventures.</p>
+  <p class="mb-8 text-lg text-gray-700">Find trip reports, packing lists, and more for recent and upcoming Troop 185 adventures.</p>
   
   {#if events.length > 0}
     <!-- Events Grid -->
@@ -30,8 +30,4 @@
       <p class="text-gray-500">Check back soon for upcoming trips and activities!</p>
     </div>
   {/if}
-  
-  <div class="mt-16 text-center">
-    <p class="text-sm text-gray-600">Excellence in Boy Scouting by a Boy-Led Troop</p>
-  </div>
 </div>
