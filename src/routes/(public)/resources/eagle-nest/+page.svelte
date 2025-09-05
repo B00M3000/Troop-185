@@ -20,6 +20,6 @@
     <li><a href="https://www.mytroop185.com/eagle-proj-year" class="text-blue-600 underline" target="_blank" rel="noopener">Troop 185 Eagle Projects of the Year</a></li>
   </ul>
   <div class="flex flex-col items-center mt-8">
-    <img src="https://www.mytroop185.com/files/2019-08-08_14_53_19_eagle_1-jz31hf7zs4ae.png" alt="Eagle" class="w-64 rounded shadow mb-4" />
+    <img src="https://www.mytroop185.com/images/eagle-scout-badge.png" alt="Eagle" class="w-64 mb-4" />
   </div>
 </div>

@@ -14,5 +14,5 @@
   <p class="mb-4">Troop 185 offers the traditional scouting experience for boys and girls in grades 6 through 12. Our program is open to all youth in Wellesley and surrounding towns.</p>
   <p class="mb-4">You are encouraged to visit a Troop meeting to learn about our robust youth led scouting program. See the photos & videos of our Scouts in action!!</p>
   <p class="mb-4 font-semibold">Noone will be denied access to the scouting program due to cost. Families wishing financial assistance should speak in-confidence with Scoutmaster Jon Flynn.</p>
-  <p class="mb-4"><a href="/resources/misc-forms" class="text-blue-600 underline">Enrollment Forms</a></p>
+  <p class="mb-4"><a href="/resources/forms" class="text-blue-600 underline">Enrollment Forms</a></p>
 </div>

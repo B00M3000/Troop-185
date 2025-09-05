@@ -15,10 +15,10 @@
                 <span>7:30 PM to 9:00 PM</span>
             </div>
             <div class="flex flex-col items-start text-sm text-gray-200">
-                <span class="flex items-center gap-2 text-base font-semibold mb-2 text-white"><MapPin class="w-5 h-5 text-yellow-300"/> Where</span>
-                <span>St. Paul's Church</span>
-                <span>502 Washington Street</span>
-                <span>Wellesley, MA</span>
+                <span class="flex items-center gap-2 text-base font-semibold mb-2 text-white"><a href="https://maps.app.goo.gl/RML4yyvobwqaLH7S9"><MapPin class="w-5 h-5 text-yellow-300"/></a><a href="https://maps.app.goo.gl/RML4yyvobwqaLH7S9" class="hover:text-yellow-300 transition-colors"> Where</a></span>
+                <span><a href="https://maps.app.goo.gl/RML4yyvobwqaLH7S9" class="hover:text-yellow-300 transition-colors">St. Paul's Church</a></span>
+                <span><a href="https://maps.app.goo.gl/RML4yyvobwqaLH7S9" class="hover:text-yellow-300 transition-colors">502 Washington Street</a></span>
+                <span><a href="https://maps.app.goo.gl/RML4yyvobwqaLH7S9" class="hover:text-yellow-300 transition-colors">Wellesley, MA 02482</a></span>
             </div>
             <div class="flex flex-col items-start text-sm text-gray-200">
                 <span class="flex items-center gap-2 text-base font-semibold mb-2 text-white"><Mail class="w-5 h-5 text-yellow-300"/> Contact</span>
@@ -26,7 +26,7 @@
                     <a href="mailto:info@mytroop185.com" class="hover:text-yellow-300 transition-colors"><Mail class="w-5 h-5"/></a>
                     <a href="https://instagram.com/troop_185_wellesley?igshid=l8sgk5gmq9l0" class="hover:text-yellow-300 transition-colors"><Instagram class="w-5 h-5"/></a>
                 </div>
-                <span>info@mytroop185.com</span>
+                <span><a href="mailto:info@mytroop185.com" class="hover:text-yellow-300 transition-colors">info@mytroop185.com</a></span>
             </div>
         </div>
     </div>
@@ -37,8 +37,8 @@
         <div class="flex gap-x-4 gap-y-2 text-sm flex-wrap text-gray-300">
             <a href="/resources/faq" class="hover:text-yellow-300 transition-colors">FAQ</a>
             <a href="/trips-events" class="hover:text-yellow-300 transition-colors">Trips & Events</a>
-            <a href="/calendar" class="hover:text-yellow-300 transition-colors">Calendar</a>
-            <a href="/misc-forms" class="hover:text-yellow-300 transition-colors">Forms & Docs</a>
+            <a href="/resources/calendar" class="hover:text-yellow-300 transition-colors">Calendar</a>
+            <a href="/resources/forms" class="hover:text-yellow-300 transition-colors">Forms</a>
         </div>
         <span class="text-sm text-gray-400">© 2025 Troop 185. All Rights Reserved.</span>
     </div>

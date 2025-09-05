@@ -20,9 +20,9 @@
       image: '/images/2019-08-23_16_17_10_mayflower_council_csp.jpg',
     },
     {
-      title: 'Miscellaneous Forms',
+      title: 'Forms',
       description: 'Important forms and documents for scouts and families.',
-      href: '/resources/misc-forms',
+      href: '/resources/forms',
       image: '/images/summer-2024-troop-185-yawgoog-scout-camp.png', // Placeholder
     },
     {

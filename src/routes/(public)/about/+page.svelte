@@ -28,7 +28,8 @@
         <h2 class="text-2xl font-bold text-blue-700 mb-2">Our Mission</h2>
         <p>Create memories and share experiences with fellow Scouts and Scout Leaders. Our traditional Scouting Experience is all about building confidence and self-esteem, learning important life skills and leadership skills, team building, outdoor adventure, education and Lots of Fun!!</p>
         <p>Scouts learn how to make good choices and to take responsibility for their actions so that they are prepared for their adult life as independent persons.</p>
-      </div>
+    </div>
+    <h2 class="text-2xl font-bold text-blue-700 mb-2"><a href="/resources/faq" class="underline">FAQ</a></h2>
     </div>
   </div>
   <!-- Cards Section -->
