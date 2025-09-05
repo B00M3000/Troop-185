@@ -18,7 +18,7 @@
     <li><a href="https://filestore.scouting.org/filestore/pdf/210-045_WB.pdf" class="text-blue-600 underline" target="_blank" rel="noopener">Baylor University Study: Eagle Scouts - Merit Beyond The Badge (PDF)</a></li>
   </ul>
   <div class="flex flex-col mt-1">
-    <img src="https://www.mytroop185.com/images/eagle-scout-badge.png" alt="Eagle" class="w-64" />
+    <img src="/images/eagle-scout-badge.png" alt="Eagle" class="w-64" />
       <h3 class="text-3xl font-bold mb-2 text-blue-800">Troop 185 Eagles</h3>
       <ol class="list-decimal pl-4">
       <li class="pl-2">12/15/78 Lempert, Thomas</li>

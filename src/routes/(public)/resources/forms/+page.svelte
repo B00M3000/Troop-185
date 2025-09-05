@@ -18,9 +18,9 @@
     <p> Other information</p>
     <ul class="list-disc pl-6 mb-8">
     <li><a href="https://www.animatedknots.com/scouting-knots" class="text-blue-600 underline" target="_blank" rel="noopener">Animated Knots</a></li>
-    <li><a href="https://www.mytroop185.com/files/camp_fire_planner.pdf" class="text-blue-600 underline" target="_blank" rel="noopener">Camp Fire Planner</a></li>
-    <li><a href="https://www.mytroop185.com/files/dutch_oven.pdf" class="text-blue-600 underline" target="_blank" rel="noopener">Dutch Oven Temp Guide</a></li>
-    <li><a href="https://www.mytroop185.com/files/patrol_menu_planning_worksheet.pdf" class="text-blue-600 underline" target="_blank" rel="noopener">Patrol Menu Planner</a></li>
-    <li><a href="https://www.mytroop185.com/files/patrol_duty_roster.pdf" class="text-blue-600 underline" target="_blank" rel="noopener">Patrol Duty Roster</a></li>
+    <li><a href="/files/camp_fire_planner.pdf" class="text-blue-600 underline" target="_blank" rel="noopener">Camp Fire Planner</a></li>
+    <li><a href="/files/dutch_oven.pdf" class="text-blue-600 underline" target="_blank" rel="noopener">Dutch Oven Temp Guide</a></li>
+    <li><a href="/files/patrol_menu_planning_worksheet.pdf" class="text-blue-600 underline" target="_blank" rel="noopener">Patrol Menu Planner</a></li>
+    <li><a href="/files/patrol_duty_roster.pdf" class="text-blue-600 underline" target="_blank" rel="noopener">Patrol Duty Roster</a></li>
   </ul>
 </div>
