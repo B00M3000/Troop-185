@@ -11,6 +11,6 @@
   </div>
   <div class="flex justify-center my-8">
     <!-- You can embed a Google Calendar iframe here if you have the embed link -->
-    <iframe src="https://calendar.google.com/calendar/embed?src=mytroop185%40gmail.com&ctz=America%2FNew_York" style="border: 0" width="100%" height="600" frameborder="0" scrolling="no" class="rounded shadow"></iframe>
+    <iframe src="https://calendar.google.com/calendar/embed?src=mytroop185%40gmail.com&ctz=America%2FNew_York" style="border: 0" width="100%" height="600" frameborder="0" scrolling="no" class="rounded shadow" title="Troop 185 Google Calender"></iframe>
   </div>
 </div>
