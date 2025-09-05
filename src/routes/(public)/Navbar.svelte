@@ -1,5 +1,5 @@
 <script lang=ts>
-    import { Menu, X, Home, Info, Mail, User, Calendar, BookOpen, FileText, Feather } from 'lucide-svelte';
+    import { Menu, X, Home, Info, Mail, User, Calendar, BookOpen, Coins, FileText, Feather } from 'lucide-svelte';
     import { fade, slide } from 'svelte/transition';
     import { page } from '$app/stores';
     import { onNavigate } from '$app/navigation';
@@ -12,7 +12,7 @@
       // { name: 'Contact', href: '/contact', icon: Mail },
       { name: 'Trips and Events', href: '/trips-events', icon: Calendar },
       { name: 'Resources', href: '/resources', icon: BookOpen },
-      // { name: 'Scouting', href: '/scouting-101', icon: BookOpen },
+      { name: 'Fund Raising', href: '/fund-raising', icon: Coins },
       // { name: 'Forms', href: '/misc-forms', icon: FileText },
       // { name: 'Eagle Nest', href: '/eagle-nest', icon: Feather },
       { name: 'Portal', href: '/portal', icon: User },

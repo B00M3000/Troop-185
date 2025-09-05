@@ -38,6 +38,12 @@
       image: '/logo.png', // Placeholder
     },
     {
+      title: 'Troop Cookbook',
+      description: 'Troop 185s favorite camping recipies',
+      href: '/cookbook',
+      image: '/images/pot_of_fire.jpg',
+    },
+    {
       description: 'Renew national membership, view your scoutbook, and more.',
       href: 'https://www.scouting.org/',
       image: '/images/scouting-usa-logo.png', // Placeholder
