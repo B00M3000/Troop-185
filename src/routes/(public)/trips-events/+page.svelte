@@ -9,7 +9,15 @@
 
 <div class="max-w-6xl mx-auto p-6">
   <h1 class="text-3xl font-bold mb-6 text-blue-800">Trips & Events</h1>
-  <p class="mb-8 text-lg text-gray-700">Find trip reports, packing lists, and more for recent and upcoming Troop 185 adventures.</p>
+  
+  <div class="mb-6 py-2 bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+    <div style="text-align: center; display: flex; flex-flow: column; align-items: center;">
+    <p class="mb-2 text-lg">Use this button for Troop payments.</p>
+    <a href="https://www.paypal.com/paypalme/Troop185Wellesley" target="_blank" class="center"><img src="/images/paypal.png" alt="PayPal Logo"></a>
+    <p class="text-lg">Please include a note stating the Scout’s name and purpose of the payment (eg dues, Nantucket trip etc)</p>
+    </div>
+  </div>
+  <p class="mb-8 text-lg">Trip reports, and packing lists for recent and upcoming Troop 185 adventures.</p>
   
   {#if events.length > 0}
     <!-- Events Grid -->

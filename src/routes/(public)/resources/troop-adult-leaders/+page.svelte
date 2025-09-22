@@ -17,6 +17,7 @@
           <li>Dr. Kevin Daly</li>
           <li>Mr. Frank Wood</li>
           <li>Mr. Steve Benson</li>
+          <li>Mr. Patrick Hurley</li>
         </ul>
       </div>
       <div>
