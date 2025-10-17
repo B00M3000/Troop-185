@@ -24,7 +24,7 @@
                 <span class="flex items-center gap-2 text-base font-semibold mb-2 text-white"><Mail class="w-5 h-5 text-yellow-300"/> Contact</span>
                 <div class="flex mb-2 gap-3">
                     <a href="mailto:info@mytroop185.com" class="hover:text-yellow-300 transition-colors"><Mail class="w-5 h-5"/></a>
-                    <a href="https://instagram.com/troop_185_wellesley?igshid=l8sgk5gmq9l0" class="hover:text-yellow-300 transition-colors"><Instagram class="w-5 h-5"/></a>
+                    <a href="https://instagram.com/wellesleytroop185" class="hover:text-yellow-300 transition-colors"><Instagram class="w-5 h-5"/></a>
                 </div>
                 <span><a href="mailto:info@mytroop185.com" class="hover:text-yellow-300 transition-colors">info@mytroop185.com</a></span>
             </div>
