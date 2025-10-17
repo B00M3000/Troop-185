@@ -1,5 +1,5 @@
 <script>
-  import Footer from 'routes/(public)/Footer.svelte';
+  import Footer from '../(public)/Footer.svelte';
 </script>
 
 <Footer />
