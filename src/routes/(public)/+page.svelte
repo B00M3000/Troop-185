@@ -1,5 +1,5 @@
-<div class="flex justify-center w-full bg-white py-4 px-4">
-  <div class="flex flex-col lg:flex-row m-4 gap-12 max-w-6xl w-full">
+<div class="flex justify-center w-full bg-white px-4">
+  <div class="flex flex-col lg:flex-row m-2 gap-12 max-w-6xl w-full">
     <!-- Main Content -->
     <div class="flex-1 min-w-0">
       <h1 class="font-bold text-3xl mb-4">Welcome to the 2025-26 Scouting year.</h1>
@@ -14,9 +14,22 @@
       <div class="mb-4">
         <span class="font-semibold">To learn more:</span> <a href="mailto:scoutmaster@mytroop185.com" class="text-blue-600 underline">scoutmaster@mytroop185.com</a>
       </div>
-      <div>
+      <div class="mb-4">
         <span class="font-semibold">Check out our</span> <a href="/resources/calendar" class="text-blue-600 underline">calendar</a> <span class="font-semibold">of meetings and</span> <a href="/trips-events" class="text-blue-600 underline">activities</a>
       </div>
+      <div>
+        <p class="font-semibold">Troop 2025-26 Adventure Highlights</p>
+        <p>September – Saco River Canoe Trip</p>
+        <p>October – New Hampshire Canoe, Hiking, Mountain Biking, Disk Golf, Corn Maze, Rock Gym Adventure</p>
+        <p>November – Mount Cardigan</p>
+        <p>January – Winter Carnival at the Dartmouth Skiway</p>
+        <p>February – Winter Hut Trip (for senior Scouts)</p>
+        <p>April – Dry River Overnight</p>
+        <p>May – Memorial Day Hut Trip to the AMC’s Greenleaf Hut</p>
+        <p>July - Philmont, NM 2 week High Adventure Backpack</p>
+        <p>August - Yawgoog Summer Camp</p>
+      </div>
+
     </div>
     <!-- Images -->
     <div class="flex flex-col gap-8 items-center lg:max-w-xs w-full">
