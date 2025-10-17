@@ -202,7 +202,7 @@
       <li class="pl-2">06/04/23 Wieland, Cole</li>
       <li class="pl-2">12/03/23 Bonnette, Willoughby</li>
       <li class="pl-2">12/03/23 Goggin, William</li>
-      <li class="pl-2">06/08/24 de Peyster, Teddy</li>"
+      <li class="pl-2">06/08/24 de Peyster, Teddy</li>
       <li class="pl-2">10/24/25 McCurley, John</li>
       <li class="pl-2">1/27/25 Keiper, Benjamin</li>
       <li class="pl-2">3/12/25 Ohaegbulam, William</li>
