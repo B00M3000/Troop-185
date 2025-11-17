@@ -1,3 +1,7 @@
+<script lang=ts>
+    import { Instagram } from "lucide-svelte";
+</script>
+
 <div class="flex justify-center w-full bg-white px-4">
   <div class="flex flex-col lg:flex-row m-2 gap-12 max-w-6xl w-full">
     <!-- Main Content -->
@@ -13,6 +17,9 @@
       <p class="mb-4 text-lg">Scouting turns kids into leaders through the development of practical skills that are applied in youth-led community service projects here in Wellesley and a range of amazing outdoor adventures across New England and beyond. There is no bad time to start, and no prior experience with scouting, camping, or anything else is expected.</p>
       <div class="mb-4">
         <span class="font-semibold">To learn more:</span> <a href="mailto:scoutmaster@mytroop185.com" class="text-blue-600 underline">scoutmaster@mytroop185.com</a>
+      </div>
+      <div class="mb-4 flex">
+        <span class="font-semibold mr-1">Follow </span>wellesleytroop185 on <a href="https://instagram.com/wellesleytroop185" class="text-blue-600 underline flex ml-1"><Instagram class="w-5 h-5 ml-1 mr-1"/> Instagram</a>
       </div>
       <div class="mb-4">
         <span class="font-semibold">Check out our</span> <a href="/resources/calendar" class="text-blue-600 underline">calendar</a> <span class="font-semibold">of meetings and</span> <a href="/trips-events" class="text-blue-600 underline">activities</a>
