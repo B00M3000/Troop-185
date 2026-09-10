@@ -6,7 +6,7 @@
   <div class="flex flex-col lg:flex-row m-2 gap-12 max-w-6xl w-full">
     <!-- Main Content -->
     <div class="flex-1 min-w-0">
-      <h1 class="font-bold text-3xl mb-4">Welcome to the 2025-26 Scouting year.</h1>
+      <h1 class="font-bold text-3xl mb-4">Welcome to the 2026-27 Scouting year.</h1>
       <p class="mb-4 text-lg">Troop 185 welcomes boys and girls age 11 and up to learn more about Scouting in Wellesley, MA!</p>
       <p class="mb-4 text-lg">Real-world leadership development, useful life skills, epic outdoor adventures, impactful community service opportunities close to home.</p>
       <div class="mb-4 flex flex-col gap-2">
@@ -25,15 +25,17 @@
         <span class="font-semibold">Check out our</span> <a href="/resources/calendar" class="text-blue-600 underline">calendar</a> <span class="font-semibold">of meetings and</span> <a href="/trips-events" class="text-blue-600 underline">activities</a>
       </div>
       <div>
-        <p class="font-semibold">Troop 2025-26 Adventure Highlights</p>
-        <p>September – Saco River Canoe Trip</p>
-        <p>October – New Hampshire Canoe, Hiking, Mountain Biking, Disk Golf, Corn Maze, Rock Gym Adventure</p>
-        <p>November – Mount Cardigan</p>
-        <p>January – Winter Carnival at the Dartmouth Skiway</p>
+        <p class="font-semibold">Troop 2026-27 Adventure Highlights</p>
+        <p>September – Whitewater Rafting in Maine, and Scouting for Food</p>
+        <p>October – Annual Nantucket Bike Trip</p>
+        <p>November – Mayflower Scoutsgiving at Camp Squanto</p>
+        <p>December - Day Hike</p>
+        <p>January – Winter Freezeout</p>
         <p>February – Winter Hut Trip (for senior Scouts)</p>
-        <p>April – Dry River Overnight</p>
-        <p>May – Memorial Day Hut Trip to the AMC’s Greenleaf Hut</p>
-        <p>July - Philmont, NM 2 week High Adventure Backpack</p>
+        <p>March - Rock Gym Overnight</p>
+        <p>April - Sea Base Florida High Adventure</p>
+        <p>May – Rumney Rock Climbing Campout</p>
+        <p>May – Memorial Day Hut Trip to the AMC’s Lonesome Lake Hut</p>
         <p>August - Yawgoog Summer Camp</p>
       </div>
 
@@ -41,8 +43,8 @@
     <!-- Images -->
     <div class="flex flex-col gap-8 items-center lg:max-w-xs w-full">
       <div class="flex flex-col items-center mb-2">
-        <img src="/images/2025-yawgoog-troop-185.png" alt="Summer 2025 Troop 185 Yawgoog Scout Camp" class="rounded shadow mb-2 w-full object-cover" />
-        <span class="text-center text-base font-medium">Summer 2025 Troop 185 Yawgoog Scout Camp</span>
+        <img src="/images/2026-yawgoog-troop-185.png" alt="Summer 2026 Troop 185 Yawgoog Scout Camp" class="rounded shadow mb-2 w-full object-cover" />
+        <span class="text-center text-base font-medium">Summer 2026 Troop 185 Yawgoog Scout Camp</span>
       </div>
       <div class="flex flex-col items-center">
         <img src="/images/2025-maine-ha.jpg" alt="2025 Troop 185 Maine High Adventure Trip" class="rounded shadow mb-2 w-full object-cover" />
