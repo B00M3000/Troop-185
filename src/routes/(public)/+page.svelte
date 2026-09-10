@@ -47,7 +47,7 @@
         <span class="text-center text-base font-medium">Summer 2026 Troop 185 Yawgoog Scout Camp</span>
       </div>
       <div class="flex flex-col items-center mb-2">
-        <img src="/images/2026-jr_philmont.jpg" alt="Summer 2026 Troop 185 Philmont High Adventure" class="rounded shadow mb-2 w-full object-cover" />
+        <img src="/images/2026-jr-philmont.jpg" alt="Summer 2026 Troop 185 Philmont High Adventure" class="rounded shadow mb-2 w-full object-cover" />
         <span class="text-center text-base font-medium">Summer 2026 Philmont High Adventure Crew 2</span>
       </div>
       <div class="flex flex-col items-center">
