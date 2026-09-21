@@ -40,6 +40,6 @@
             <a href="/resources/calendar" class="hover:text-yellow-300 transition-colors" target="_top">Calendar</a>
             <a href="/resources/forms" class="hover:text-yellow-300 transition-colors" target="_top">Forms</a>
         </div>
-        <span class="text-sm text-gray-400">© 2025 Troop 185. All Rights Reserved.</span>
+        <span class="text-sm text-gray-400">© 2026 Troop 185. All Rights Reserved.</span>
     </div>
 </footer>

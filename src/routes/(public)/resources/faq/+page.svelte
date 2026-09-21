@@ -16,7 +16,7 @@
       <p class="p-4">Per the Scout Law: <strong>a Scout is trustworthy, loyal, helpful, friendly, courteous, kind, obedient, cheerful, thrifty, brave, clean, and reverent.</strong>
       </p>
       <h3 class="text-lg font-semibold text-gray-800 mb-2">Troop 185, Wellesley</h3>
-      <p>Troop 185 is a Scouts BSA Troop affiliated with Scouting America's Mayflower Council and charted by the St. John’s / St. Paul’s Parish Collaborative in Wellesley, MA. The Troop has been active for over 50 years.</p>
+      <p>Troop 185 is a Scouts BSA Troop affiliated with Scouting America's Mayflower Council and charted by the Kiwanis Club of Wellesley. The Troop has been active for over 50 years.</p>
       <ul class="list-disc pl-6 mb-8">
       <li>There are approximately 45 active scouts and 8 active adult leaders in the Troop.</li>
       <li>Last year we had 8 scouts earn the rank of Eagle Scout.</li>
