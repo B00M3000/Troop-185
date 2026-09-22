@@ -72,7 +72,7 @@
       </ul>
       <h3 class="text-lg font-semibold text-gray-800 mb-3">Scoutmaster</h3>
       <ul class="list-disc pl-6 mb-8"><li>Jon Flynn: email at jonflynn@mac.com or text/call at 617-694-8415.</li>
-        <li>I was an Eagle Scout in Troop 12, Pleasantville, NY, and previously the Cubmaster of Pack 355 in Newton. I have two sons in the Troop.</li>
+        <li>I was an Eagle Scout in Troop 12, Pleasantville, NY, and previously the Cubmaster of Pack 355 in Newton. I have two sons and a daughter in the Troop.</li>
         </ul>
         <p>We look forward to having you join Troop 185 Wellesley!</p>
        </div>
