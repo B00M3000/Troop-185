@@ -20,7 +20,7 @@
       <ul class="list-disc pl-6 mb-8">
       <li>There are approximately 45 active scouts and 8 active adult leaders in the Troop.</li>
       <li>Last year we had 8 scouts earn the rank of Eagle Scout.</li>
-      <li>We meet weekly on Monday at 7:30 PM at St. Paul’s Church, excluding school holidays. The parking entrance is off Atwood Street.</li>
+      <li>We meet weekly on Monday at 7:30 PM at 12 Atwood St, Wellesley, MA 02482, excluding school holidays.</li>
       <li>Parents are welcome to attend meetings, but they are not required to. Most parents drop off their scouts for the meeting.</li>
       <li><a href="/files/your_uniform.pdf" class="text-blue-600 underline mb-1" target="_blank" rel="noopener">Your Uniform</a></li>
       <li><a href="/files/insignia_placement.pdf" class="text-blue-600 underline mb-1" target="_blank" rel="noopener">Patches Go Where?</a></li>

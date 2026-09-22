@@ -15,10 +15,9 @@
                 <span>7:30 PM to 9:00 PM</span>
             </div>
             <div class="flex flex-col items-start text-sm text-gray-200">
-                <span class="flex items-center gap-2 text-base font-semibold mb-2 text-white"><a href="https://maps.app.goo.gl/RML4yyvobwqaLH7S9" target="_top"><MapPin class="w-5 h-5 text-yellow-300"/></a><a href="https://maps.app.goo.gl/RML4yyvobwqaLH7S9" class="hover:text-yellow-300 transition-colors" target="_top"> Where</a></span>
-                <span><a href="https://maps.app.goo.gl/RML4yyvobwqaLH7S9" class="hover:text-yellow-300 transition-colors" target="_top">St. Paul's Church</a></span>
-                <span><a href="https://maps.app.goo.gl/RML4yyvobwqaLH7S9" class="hover:text-yellow-300 transition-colors" target="_top">502 Washington Street</a></span>
-                <span><a href="https://maps.app.goo.gl/RML4yyvobwqaLH7S9" class="hover:text-yellow-300 transition-colors" target="_top">Wellesley, MA 02482</a></span>
+                <span class="flex items-center gap-2 text-base font-semibold mb-2 text-white"><a href="https://maps.app.goo.gl/qGvnzBuXeFDZhdZV9" target="_top"><MapPin class="w-5 h-5 text-yellow-300"/></a><a href="https://maps.app.goo.gl/RML4yyvobwqaLH7S9" class="hover:text-yellow-300 transition-colors" target="_top"> Where</a></span>
+                <span><a href="https://maps.app.goo.gl/qGvnzBuXeFDZhdZV9" class="hover:text-yellow-300 transition-colors" target="_top">12 Atwood St</a></span>
+                <span><a href="https://maps.app.goo.gl/qGvnzBuXeFDZhdZV9" class="hover:text-yellow-300 transition-colors" target="_top">Wellesley, MA 02482</a></span>
             </div>
             <div class="flex flex-col items-start text-sm text-gray-200">
                 <span class="flex items-center gap-2 text-base font-semibold mb-2 text-white"><Mail class="w-5 h-5 text-yellow-300"/> Contact</span>
