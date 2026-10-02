@@ -217,6 +217,8 @@
       <li class="pl-2">06/29/26 Bonnette, Alex</li>
       <li class="pl-2">08/26/26 Grosso, Andrew</li>
       <li class="pl-2">09/28/26 Keiper, Christian</li>
+      <li class="pl-2">10/01/26 Flynn, Nathaniel</li>
+      <li class="pl-2">10/01/26 Daly, Alexander</li>
     </ol>
   </div>
 </div>
