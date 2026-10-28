@@ -11,7 +11,7 @@
       <p class="mb-4 text-lg">Real-world leadership development, useful life skills, epic outdoor adventures, impactful community service opportunities close to home.</p>
       <div class="mb-4 flex flex-col gap-2">
         <p class="mb-1"><span class="font-semibold">When:</span> Mondays from 7:30pm to 9:00pm, plus weekend outings about once a month (many of our Scouts participate in multiple sports and other activities - perfect attendance is not required or expected)</p>
-        <p class="mb-1"><span class="font-semibold">Where:</span> Parish Hall at St. Paul’s on Washington Street</p>
+        <p class="mb-1"><span class="font-semibold">Where:</span> Parish Hall at 12 Atwood St, Wellesley MA</p>
         <p class="mb-1"><span class="font-semibold">Why:</span> Because it’s fun! Do you have a child who likes to go hiking, camping, kayaking, or just messing around in the outdoors... or do you think they would enjoy these things if given the opportunity in a fun and supportive environment surrounded by other like-minded kids?</p>
       </div>
       <p class="mb-4 text-lg">Scouting turns kids into leaders through the development of practical skills that are applied in youth-led community service projects here in Wellesley and a range of amazing outdoor adventures across New England and beyond. There is no bad time to start, and no prior experience with scouting, camping, or anything else is expected.</p>
