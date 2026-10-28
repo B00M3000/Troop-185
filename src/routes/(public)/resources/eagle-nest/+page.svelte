@@ -6,9 +6,8 @@
   <h1 class="text-3xl font-bold mb-6 text-blue-800">Eagle Nest</h1>
   <p class="mb-4 text-lg">Resources and materials for Eagle Scouts and candidates.</p>
   <ul class="list-disc pl-6">
-    <li><a href="http://www.scouting.org/filestore/pdf/512-728_WB_fillable.pdf" class="text-blue-600 underline" target="_blank" rel="noopener">Eagle Scout Rank Application</a></li>
     <li><a href="https://www.mayflowerbsa.org/service-project-proposal-and-report/" class="text-blue-600 underline" target="_blank" rel="noopener">How to Prepare Your Eagle Project Proposal (PDF)</a></li>
-    <li><a href="https://www.scouting.org/wp-content/uploads/2023/01/EagleProjectWorkbook2023a.pdf" class="text-blue-600 underline" target="_blank" rel="noopener">Eagle Project Workbook</a></li>
+    <li><a href="https://www.scouting.org/wp-content/uploads/2026/10/512-92726-Eagle-Scout-Leadership-Service-Project-Workbook.pdf" class="text-blue-600 underline" target="_blank" rel="noopener">Eagle Project Workbook</a></li>
     <li><a href="/files/sample-eagle_project-log.pdf" class="text-blue-600 underline" target="_blank" rel="noopener">Eagle Project Service Log Sample (PDF)</a></li>
     <li><a href="/files/eagle_project_service_log.xls" class="text-blue-600 underline" target="_blank" rel="noopener">Eagle Project Service Log Spreadsheet (XLS)</a></li>
     <li><a href="https://www.scouting.org/wp-content/uploads/2024/01/2024-Eagle-Palms-requirements.pdf" class="text-blue-600 underline" target="_blank" rel="noopener">Eagle Palms (PDF)</a></li>
